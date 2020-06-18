@@ -1,0 +1,33 @@
+{
+    "name": "owl-ui",
+    "version": "0.1.0",
+    "description": "vue component",
+    "scripts": {
+        "build:lib": "npx webpack --config ./build/webpack.config.lib.js",
+        "build:style": "cd ./build && npx gulp sass",
+        "dev:style": "cd ./build && npx gulp watch:sass",
+        "dev:lib": "npx webpack --watch --config ./build/webpack.config.lib.dev.js",
+        "dev": "yarn run dev:lib && yarn run dev:style",
+        "build": "yarn run build:style && yarn run build:lib"
+    },
+    "main": "src/index.js",
+    "author": "guojikun",
+    "license": "MIT",
+    "private": false,
+    "devDependencies": {
+        "@babel/cli": "^7.10.1",
+        "@babel/core": "^7.10.2",
+        "@babel/preset-env": "^7.10.2",
+        "babel-loader": "^8.1.0",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-sass": "^4.1.0",
+        "vue-loader": "^15.9.2",
+        "vue-template-compiler": "^2.6.11",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.12"
+    },
+    "dependencies": {
+        "core-js": "3"
+    }
+}
