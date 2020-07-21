@@ -1,0 +1,109 @@
+@import "var";
+
+.fade-in-linear-enter-active,
+.fade-in-linear-leave-active {
+    transition: $mx--fade-linear-transition;
+}
+
+.fade-in-linear-enter,
+.fade-in-linear-leave,
+.fade-in-linear-leave-active {
+    opacity: 0;
+}
+
+.mx-fade-in-linear-enter-active,
+.mx-fade-in-linear-leave-active {
+    transition: $mx--fade-linear-transition;
+}
+
+.mx-fade-in-linear-enter,
+.mx-fade-in-linear-leave,
+.mx-fade-in-linear-leave-active {
+    opacity: 0;
+}
+
+.mx-fade-in-enter-active,
+.mx-fade-in-leave-active {
+    transition: all .3s cubic-bezier(.55, 0, .1, 1);
+}
+
+.mx-fade-in-enter,
+.mx-fade-in-leave-active {
+    opacity: 0;
+}
+
+.mx-zoom-in-center-enter-active,
+.mx-zoom-in-center-leave-active {
+    transition: all .3s cubic-bezier(.55, 0, .1, 1);
+}
+
+.mx-zoom-in-center-enter,
+.mx-zoom-in-center-leave-active {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.mx-zoom-in-top-enter-active,
+.mx-zoom-in-top-leave-active {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: $mx--md-fade-transition;
+    transform-origin: center top;
+}
+
+.mx-zoom-in-top-enter,
+.mx-zoom-in-top-leave-active {
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+.mx-zoom-in-bottom-enter-active,
+.mx-zoom-in-bottom-leave-active {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: $mx--md-fade-transition;
+    transform-origin: center bottom;
+}
+
+.mx-zoom-in-bottom-enter,
+.mx-zoom-in-bottom-leave-active {
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+.mx-zoom-in-left-enter-active,
+.mx-zoom-in-left-leave-active {
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: $mx--md-fade-transition;
+    transform-origin: top left;
+}
+
+.mx-zoom-in-left-enter,
+.mx-zoom-in-left-leave-active {
+    opacity: 0;
+    transform: scale(.45, .45);
+}
+
+.collapse-transition {
+    transition: 0.3s height ease-in-out, 0.3s padding-top ease-in-out, 0.3s padding-bottom ease-in-out;
+}
+
+.horizontal-collapse-transition {
+    transition: 0.3s width ease-in-out, 0.3s padding-left ease-in-out, 0.3s padding-right ease-in-out;
+}
+
+.mx-list-enter-active,
+.mx-list-leave-active {
+    transition: all 1s;
+}
+
+.mx-list-enter,
+.mx-list-leave-active {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.mx-opacity-transition {
+    transition: opacity .3s cubic-bezier(.55, 0, .1, 1);
+}

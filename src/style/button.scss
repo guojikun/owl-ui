@@ -1,0 +1,284 @@
+@import "@/styles/common/var.scss";
+.mx-button {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    border: 1px solid $mx-border-color-default;
+    background: #fff;
+    color: #606266;
+    &:hover,
+    &:focus {
+        color: $mx--color-primary;
+        border-color: $mx--color-primary-light-7;
+        background-color: $mx--color-primary-light-9;
+    }
+    & + & {
+        margin-left: 10px;
+    }
+    &--default {
+        padding: 8px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+        &.is-round {
+            border-radius: 16px;
+        }
+    }
+    &--mini {
+        padding: 4px 12px;
+        font-size: 12px;
+        border-radius: 2px;
+        &.is-round {
+            border-radius: 11px;
+        }
+    }
+    &--small {
+        padding: 6px 14px;
+        font-size: 12px;
+        border-radius: 3px;
+        &.is-round {
+            border-radius: 13px;
+        }
+    }
+    &--large {
+        padding: 12px 28px;
+        font-size: 14px;
+        border-radius: 4px;
+        &.is-round {
+            border-radius: 20px;
+        }
+    }
+    &.is-plain {
+        &:hover,
+        &:focus {
+            color: $mx--color-primary;
+            border-color: $mx--color-primary;
+            background-color: $mx--color-white;
+        }
+    }
+    &.is-disabled,
+    &.is-disabled:active,
+    &.is-disabled:focus,
+    &.is-disabled:hover {
+        color: $mx-disabled;
+        cursor: not-allowed;
+        background-color: $mx--color-white;
+        border-color: $mx-border-color-disabled;
+    }
+    &--primary {
+        color: $mx--color-white;
+        background-color: $mx--color-primary;
+        border-color: $mx--color-primary;
+        &:hover,
+        &:focus {
+            color: $mx--color-white;
+            border-color: $mx--color-primary-light-2;
+            background-color: $mx--color-primary-light-2;
+        }
+        &.is-plain {
+            color: $mx--color-primary;
+            border-color: $mx--color-primary-light-6;
+            background-color: $mx--color-primary-light-9;
+            &:hover,
+            &:focus {
+                color: $mx--color-white;
+                border-color: $mx--color-primary;
+                background-color: $mx--color-primary;
+            }
+            &.is-disabled,
+            &.is-disabled:active,
+            &.is-disabled:focus,
+            &.is-disabled:hover {
+                color: $mx--color-primary-light-4;
+                background-color: $mx--color-primary-light-9;
+                border-color: $mx--color-primary-light-8;
+            }
+        }
+        &.is-disabled,
+        &.is-disabled:active,
+        &.is-disabled:focus,
+        &.is-disabled:hover {
+            color: #fff;
+            background-color: $mx-primary-disabled;
+            border-color: $mx-primary-disabled;
+        }
+    }
+    &--success {
+        color: $mx--color-white;
+        background-color: $mx--color-success;
+        border-color: $mx--color-success;
+        &:hover,
+        &:focus {
+            color: $mx--color-white;
+            border-color: $mx--color-success-light-2;
+            background-color: $mx--color-success-light-2;
+        }
+        &.is-plain {
+            color: $mx--color-success;
+            border-color: $mx--color-success-light-6;
+            background-color: $mx--color-success-light-9;
+            &:hover,
+            &:focus {
+                color: $mx--color-white;
+                border-color: $mx--color-success;
+                background-color: $mx--color-success;
+            }
+            &.is-disabled,
+            &.is-disabled:active,
+            &.is-disabled:focus,
+            &.is-disabled:hover {
+                color: $mx--color-success-light-4;
+                background-color: $mx--color-success-light-9;
+                border-color: $mx--color-success-light-8;
+            }
+        }
+        &.is-disabled,
+        &.is-disabled:active,
+        &.is-disabled:focus,
+        &.is-disabled:hover {
+            color: #fff;
+            background-color: $mx-success-disabled;
+            border-color: $mx-success-disabled;
+        }
+    }
+    &--danger {
+        color: $mx--color-white;
+        background-color: $mx--color-danger;
+        border-color: $mx--color-danger;
+        &:hover,
+        &:focus {
+            color: $mx--color-white;
+            border-color: $mx--color-danger-light-2;
+            background-color: $mx--color-danger-light-2;
+        }
+        &.is-plain {
+            color: $mx--color-danger;
+            border-color: $mx--color-danger-light-6;
+            background-color: $mx--color-danger-light-9;
+            &:hover,
+            &:focus {
+                color: $mx--color-white;
+                border-color: $mx--color-danger;
+                background-color: $mx--color-danger;
+            }
+            &.is-disabled,
+            &.is-disabled:active,
+            &.is-disabled:focus,
+            &.is-disabled:hover {
+                color: $mx--color-danger-light-4;
+                background-color: $mx--color-danger-light-9;
+                border-color: $mx--color-danger-light-8;
+            }
+        }
+        &.is-disabled,
+        &.is-disabled:active,
+        &.is-disabled:focus,
+        &.is-disabled:hover {
+            color: #fff;
+            background-color: $mx-danger-disabled;
+            border-color: $mx-danger-disabled;
+        }
+    }
+    &--warning {
+        color: $mx--color-white;
+        background-color: $mx--color-warning;
+        border-color: $mx--color-warning;
+        &:hover,
+        &:focus {
+            color: $mx--color-white;
+            border-color: $mx--color-warning-light-2;
+            background-color: $mx--color-warning-light-2;
+        }
+        &.is-plain {
+            color: $mx--color-warning;
+            border-color: $mx--color-warning-light-6;
+            background-color: $mx--color-warning-light-9;
+            &:hover,
+            &:focus {
+                color: $mx--color-white;
+                border-color: $mx--color-warning;
+                background-color: $mx--color-warning;
+            }
+            &.is-disabled,
+            &.is-disabled:active,
+            &.is-disabled:focus,
+            &.is-disabled:hover {
+                color: $mx--color-warning-light-4;
+                background-color: $mx--color-warning-light-9;
+                border-color: $mx--color-warning-light-8;
+            }
+        }
+        &.is-disabled,
+        &.is-disabled:active,
+        &.is-disabled:focus,
+        &.is-disabled:hover {
+            color: #fff;
+            background-color: $mx-warning-disabled;
+            border-color: $mx-warning-disabled;
+        }
+    }
+    &--info {
+        color: $mx--color-white;
+        background-color: $mx--color-info;
+        border-color: $mx--color-info;
+        &:hover,
+        &:focus {
+            color: $mx--color-white;
+            border-color: $mx--color-info-light-2;
+            background-color: $mx--color-info-light-2;
+        }
+        &.is-plain {
+            color: $mx--color-info;
+            border-color: $mx--color-info-light-6;
+            background-color: $mx--color-info-light-9;
+            &:hover,
+            &:focus {
+                color: $mx--color-white;
+                border-color: $mx--color-info;
+                background-color: $mx--color-info;
+            }
+            &.is-disabled,
+            &.is-disabled:active,
+            &.is-disabled:focus,
+            &.is-disabled:hover {
+                color: $mx--color-info-light-4;
+                background-color: $mx--color-info-light-9;
+                border-color: $mx--color-info-light-8;
+            }
+        }
+        &.is-disabled,
+        &.is-disabled:active,
+        &.is-disabled:focus,
+        &.is-disabled:hover {
+            color: #fff;
+            background-color: $mx-info-disabled;
+            border-color: $mx-info-disabled;
+        }
+    }
+    &--text {
+        color: $mx--color-primary;
+        background-color: $mx--color-transparent;
+        border-color: $mx--color-transparent;
+        &:hover,
+        &:focus {
+            color: $mx--color-primary-light-2;
+            border-color: $mx--color-transparent;
+            background-color: $mx--color-transparent;
+        }
+        &.is-disabled,
+        &.is-disabled:focus,
+        &.is-disabled:hover,
+        &:active {
+            border-color: $mx--color-transparent;
+        }
+    }
+}
