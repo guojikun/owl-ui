@@ -1,10 +1,11 @@
 <template>
     <div class="button">
-        <owl-code lang="javascript">
-            var a = 2;
-        </owl-code>
+        <pre><code v-highlight="{lang: 'html'}">var a = 2;<div>ls pwd #123</div></code></pre>
         <owl-code lang="html">
-            <p>html高亮测试</p>
+            <div>ls pwd #123</div>
+            <div>ls pwd #123</div>
+            <div>ls pwd #123</div>
+            <div>ls pwd #123</div>
         </owl-code>
     </div>
 </template>

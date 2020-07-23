@@ -12,7 +12,9 @@
             </div>
             <div>
                 <owl-code lang="html">
-                    <owl-icon name="ios-pricetag"></owl-icon>
+                    <owl-icon name="ios-search"></owl-icon>
+                    <owl-icon name="md-happy"></owl-icon>
+                    <owl-icon name="md-share"></owl-icon>
                 </owl-code>
             </div>
         </div>

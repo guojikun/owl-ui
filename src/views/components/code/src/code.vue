@@ -1,19 +1,11 @@
 <template>
-    <pre class="owl-code">
-        <div hidden aria-hidden="true" ref="ref">
-            <slot hidden></slot>
-        </div>
-        <code :class="['owl-code-inner', `language-${lang}`]" v-html="str">
-            
-        </code>
-    </pre>
+    <pre
+        class="owl-code"
+    ><div hidden ref="ref"><slot></slot></div><code :class="['owl-code-inner',`lang-${lang}`]" v-html="str" ref="s"></code></pre>
 </template>
 
 <script>
-// import hljs from "@/assets/libs/highlight/highlight.pack.js";
-// import "@/assets/libs/highlight/styles/default.css";
-// import "@/assets/libs/highlight/styles/googlecode.css";
-
+import Highlight from "@/directive/highlight.js";
 import Prism from "@/assets/libs/prism/prism.js";
 import "@/assets/libs/prism/prism.css";
 export default {
@@ -24,25 +16,16 @@ export default {
             default: "html",
         },
     },
+    directives: { Highlight },
     data() {
         return {
             str: "",
         };
     },
     mounted() {
-        this.$nextTick(() => {
-            // const s = hljs.highlight(this.$refs.ref.innerHTML, this.lang);
-            // console.log(s);
-            // hljs.highlightBlock(this.$refs.ref);
-            // hljs.initHighlightingOnLoad();
-            const code = this.$refs.ref.innerHTML;
-            this.str = Prism.highlight(code, Prism.languages[this.lang], this.lang);
-        });
-    },
-    methods: {
-        uid() {
-            return this._uid;
-        },
+        console.log(this.$refs.ref.innerHTML);
+        this.$refs.s.insertAdjacentHTML("beforeend", Prism.highlight(this.$refs.ref.innerHTML, Prism.languages.xml, "xml"));
+        // this.str = Prism.highlight(this.$refs.ref.innerHTML, Prism.languages[this.lang], this.lang);
     },
 };
 </script>
