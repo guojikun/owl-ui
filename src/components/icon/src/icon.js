@@ -13,7 +13,7 @@ export default {
         return h(
             "svg",
             {
-                class: "owl-icon",
+                class: "fox-icon",
                 attrs: {
                     viewBox: "0 0 1024 1024",
                     ariaHidden: true,
@@ -24,7 +24,7 @@ export default {
             [
                 h("use", {
                     attrs: {
-                        "xlink:href": `${icon}#owl-icon-${props.name}`,
+                        "xlink:href": `${icon}#fox-icon-${props.name}`,
                     },
                 }),
             ]

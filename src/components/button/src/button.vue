@@ -1,8 +1,8 @@
 <template>
     <button
-        class="mx-button"
+        class="fox-button"
         :disabled="disabled"
-        :class="['mx-button--' + type, 'mx-button--' + size, { 'is-disabled': disabled }, { 'is-plain': plain }, { 'is-round': round }]"
+        :class="['fox-button--' + type, 'fox-button--' + size, { 'is-disabled': disabled }, { 'is-plain': plain }, { 'is-round': round }]"
         @click="handleClick"
     >
         <slot></slot>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    name: "mxButton",
+    name: "Button",
     props: {
         type: {
             type: String,

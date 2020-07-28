@@ -1,9 +1,9 @@
 <template>
-    <div class="mx-card" :class="['is-' + shadow + '-shadow']">
-        <div class="mx-card-header" v-if="showHeader">
+    <div class="fox-card" :class="['is-' + shadow + '-shadow']">
+        <div class="fox-card-header" v-if="showHeader">
             <slot name="header"></slot>
         </div>
-        <div class="mx-card-body" :style="[bodyStyle]">
+        <div class="fox-card-body" :style="[bodyStyle]">
             <slot></slot>
         </div>
     </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    name: "mxCard",
+    name: "Card",
     props: {
         shadow: {
             type: String,
@@ -41,22 +41,22 @@ export default {
 </script>
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-card {
+.fox-card {
     border-radius: 4px;
-    background-color: $mx-white;
+    background-color: $fox-white;
     overflow: hidden;
     color: #303133;
     transition: 0.3s;
-    border: 1px solid $mx-border-color-second;
+    border: 1px solid $fox-border-color-second;
     &-header {
-        border-bottom: 1px solid $mx-border-color-second;
+        border-bottom: 1px solid $fox-border-color-second;
         padding: 15px 20px;
         box-sizing: border-box;
     }
 }
-.mx-card.is-always-shadow,
-.mx-card.is-hover-shadow:focus,
-.mx-card.is-hover-shadow:hover {
+.fox-card.is-always-shadow,
+.fox-card.is-hover-shadow:focus,
+.fox-card.is-hover-shadow:hover {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
 </style>
