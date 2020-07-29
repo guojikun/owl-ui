@@ -1,6 +1,6 @@
 {
     "name": "fox-design",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "private": false,
     "description": "vue通用组件库；fox-design；foxDesign",
     "main": "lib/fox-design.umd.js",
@@ -24,7 +24,7 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --modern --dest docs",
-        "build:lib": "vue-cli-service build --modern --dest lib --target lib --name fox-design ./src/index.js",
+        "build:lib": "vue-cli-service build --dest lib --target lib --name fox-design ./src/index.js",
         "test:unit": "vue-cli-service test:unit",
         "lint": "vue-cli-service lint"
     },
@@ -33,6 +33,7 @@
     },
     "dependencies": {
         "core-js": "^3.6.5",
+        "popper.js": "^1.16.1",
         "vue": "^2.6.11",
         "vue-router": "^3.2.0",
         "vuex": "^3.4.0"
