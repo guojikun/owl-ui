@@ -31,7 +31,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 .fox-timeline {
     margin: 0;
     font-size: $fox--font-size-base;

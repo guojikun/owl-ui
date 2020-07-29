@@ -14,6 +14,13 @@ export default {
             "svg",
             {
                 class: "fox-icon",
+                style: {
+                    width: "1em",
+                    height: "1em",
+                    verticalAlign: "-0.15em",
+                    fill: "currentColor",
+                    overflow: "hidden",
+                },
                 attrs: {
                     viewBox: "0 0 1024 1024",
                     ariaHidden: true,

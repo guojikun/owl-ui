@@ -1,5 +1,5 @@
-import Icon from ".components/icon";
-import Button from ".components/button";
+import Icon from "./components/icon";
+import Button from "./components/button";
 
 // 布局组件
 import Layout from "./components/layout/index.js";

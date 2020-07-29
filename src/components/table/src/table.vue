@@ -108,7 +108,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 .fox-table {
     box-sizing: border-box;
     border-spacing: 0;

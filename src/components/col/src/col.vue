@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 [class*="fox-col-"] {
     float: left;
     box-sizing: border-box;

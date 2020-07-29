@@ -36,7 +36,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 
 .fox-divider {
     display: inline-block;

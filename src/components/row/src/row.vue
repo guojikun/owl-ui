@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 .fox-row {
     position: relative;
     box-sizing: border-box;

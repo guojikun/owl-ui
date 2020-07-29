@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 .fox-timeline-item {
     position: relative;
     padding-bottom: 20px;

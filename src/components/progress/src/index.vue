@@ -141,7 +141,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 .fox-progress {
     overflow: hidden;
     line-height: 1;

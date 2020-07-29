@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 
 .fox-checkbox-group {
     background-color: #fff;

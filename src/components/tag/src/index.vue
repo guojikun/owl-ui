@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Icon from "../../icon/index.js";
+import FoxIcon from "@/components/icon/index.js";
 export default {
     name: "Tag",
-    components: { Icon },
+    components: { FoxIcon },
     props: {
         type: {
             type: String,
@@ -62,7 +62,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 .fox-tag {
     display: inline-block;
     padding: 0 10px;

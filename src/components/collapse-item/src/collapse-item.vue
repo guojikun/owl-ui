@@ -19,10 +19,10 @@
 <script>
 import { findBrothersComponents } from "@/utils/findComponent.js";
 import CollapseTransition from "@/utils/collapse-transition.js";
-import Icon from "pkg/icon/index.js";
+import FoxIcon from "@/components/icon/index.js";
 export default {
     name: "CollapseItem",
-    components: { Icon, CollapseTransition },
+    components: { FoxIcon, CollapseTransition },
     props: {
         value: [String, Array],
         accordion: {
@@ -96,8 +96,8 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/styles/common/var.scss";
-@import "@/styles/common/transition.scss";
+@import "@/style/common/var.scss";
+@import "@/style/common/transition.scss";
 .fox-collapse-item {
     position: relative;
     & + & {

@@ -40,7 +40,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 .fox-card {
     border-radius: 4px;
     background-color: $fox-white;

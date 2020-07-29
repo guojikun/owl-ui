@@ -47,7 +47,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/styles/common/var.scss";
+@import "@/style/common/var.scss";
 .fox-alert {
     padding: 10px 20px;
     background-color: $fox--color-primary-light-8;
