@@ -1,7 +1,7 @@
-import mxMain from "./src/main.vue";
+import Main from "./src/main.vue";
 
-mxMain.install = Vue => {
-    Vue.component(mxMain.name, mxMain);
+Main.install = Vue => {
+    Vue.component(`fox${Main.name}`, Main);
 };
 
-export default mxMain;
+export default Main;

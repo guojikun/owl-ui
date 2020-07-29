@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-layout-header" :style="getHeight">
+    <div class="fox-layout-header" :style="getHeight">
         <slot></slot>
     </div>
 </template>
@@ -21,7 +21,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.mx-layout-header {
+.fox-layout-header {
     box-sizing: border-box;
     padding: 0 20px;
     width: 100%;

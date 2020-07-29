@@ -1,209 +1,209 @@
-$mx-primary: #409eff;
-$mx-primary-disabled: #a0cfff;
+$fox-primary: #409eff;
+$fox-primary-disabled: #a0cfff;
 
-$mx-success: #67c23a;
-$mx-success-disabled: #b3e19d;
-$mx-danger: #f56c6c;
-$mx-danger-disabled: #fab6b6;
-$mx-warning: #e6a23c;
-$mx-warning-disabled: #f3d19e;
-$mx-info: #909399;
-$mx-info-disabled: #c8c9cc;
+$fox-success: #67c23a;
+$fox-success-disabled: #b3e19d;
+$fox-danger: #f56c6c;
+$fox-danger-disabled: #fab6b6;
+$fox-warning: #e6a23c;
+$fox-warning-disabled: #f3d19e;
+$fox-info: #909399;
+$fox-info-disabled: #c8c9cc;
 
-$mx-disabled: #c0c4cc;
+$fox-disabled: #c0c4cc;
 
-$mx-black: #000000;
-$mx-white: #ffffff;
+$fox-black: #000000;
+$fox-white: #ffffff;
 
-$mx-transparent: transparent;
-$mx--color-transparent: transparent;
+$fox-transparent: transparent;
+$fox--color-transparent: transparent;
 
-$mx-border-color-default: #dcdfe6;
-$mx-border-color-second: #ebeef5;
-$mx-border-color-disabled: #ebeef5;
+$fox-border-color-default: #dcdfe6;
+$fox-border-color-second: #ebeef5;
+$fox-border-color-disabled: #ebeef5;
 
 /* Color
 -------------------------- */
 /// color|1|BrandColor|0
 /// color|1|BackgroundColor|4
-$mx--color-white: #ffffff !default;
+$fox--color-white: #ffffff !default;
 /// color|1|BackgroundColor|4
-$mx--color-black: #000000 !default;
+$fox--color-black: #000000 !default;
 
-$mx--color-primary: #409eff !default;
-$mx--color-primary-light-1: mix($mx--color-white, $mx--color-primary, 10%) !default; /* 53a8ff */
-$mx--color-primary-light-2: mix($mx--color-white, $mx--color-primary, 20%) !default; /* 66b1ff */
-$mx--color-primary-light-3: mix($mx--color-white, $mx--color-primary, 30%) !default; /* 79bbff */
-$mx--color-primary-light-4: mix($mx--color-white, $mx--color-primary, 40%) !default; /* 8cc5ff */
-$mx--color-primary-light-5: mix($mx--color-white, $mx--color-primary, 50%) !default; /* a0cfff */
-$mx--color-primary-light-6: mix($mx--color-white, $mx--color-primary, 60%) !default; /* b3d8ff */
-$mx--color-primary-light-7: mix($mx--color-white, $mx--color-primary, 70%) !default; /* c6e2ff */
-$mx--color-primary-light-8: mix($mx--color-white, $mx--color-primary, 80%) !default; /* d9ecff */
-$mx--color-primary-light-9: mix($mx--color-white, $mx--color-primary, 90%) !default; /* ecf5ff */
+$fox--color-primary: #409eff !default;
+$fox--color-primary-light-1: mix($fox--color-white, $fox--color-primary, 10%) !default; /* 53a8ff */
+$fox--color-primary-light-2: mix($fox--color-white, $fox--color-primary, 20%) !default; /* 66b1ff */
+$fox--color-primary-light-3: mix($fox--color-white, $fox--color-primary, 30%) !default; /* 79bbff */
+$fox--color-primary-light-4: mix($fox--color-white, $fox--color-primary, 40%) !default; /* 8cc5ff */
+$fox--color-primary-light-5: mix($fox--color-white, $fox--color-primary, 50%) !default; /* a0cfff */
+$fox--color-primary-light-6: mix($fox--color-white, $fox--color-primary, 60%) !default; /* b3d8ff */
+$fox--color-primary-light-7: mix($fox--color-white, $fox--color-primary, 70%) !default; /* c6e2ff */
+$fox--color-primary-light-8: mix($fox--color-white, $fox--color-primary, 80%) !default; /* d9ecff */
+$fox--color-primary-light-9: mix($fox--color-white, $fox--color-primary, 90%) !default; /* ecf5ff */
 /// color|1|SecondaryColor|1
-$mx--color-success: #67c23a !default;
-$mx--color-success-light-1: mix($mx--color-white, $mx--color-success, 10%) !default; /* 53a8ff */
-$mx--color-success-light-2: mix($mx--color-white, $mx--color-success, 20%) !default; /* 66b1ff */
-$mx--color-success-light-3: mix($mx--color-white, $mx--color-success, 30%) !default; /* 79bbff */
-$mx--color-success-light-4: mix($mx--color-white, $mx--color-success, 40%) !default; /* 8cc5ff */
-$mx--color-success-light-5: mix($mx--color-white, $mx--color-success, 50%) !default; /* a0cfff */
-$mx--color-success-light-6: mix($mx--color-white, $mx--color-success, 60%) !default; /* b3d8ff */
-$mx--color-success-light-7: mix($mx--color-white, $mx--color-success, 70%) !default; /* c6e2ff */
-$mx--color-success-light-8: mix($mx--color-white, $mx--color-success, 80%) !default; /* d9ecff */
-$mx--color-success-light-9: mix($mx--color-white, $mx--color-success, 90%) !default; /* ecf5ff */
+$fox--color-success: #67c23a !default;
+$fox--color-success-light-1: mix($fox--color-white, $fox--color-success, 10%) !default; /* 53a8ff */
+$fox--color-success-light-2: mix($fox--color-white, $fox--color-success, 20%) !default; /* 66b1ff */
+$fox--color-success-light-3: mix($fox--color-white, $fox--color-success, 30%) !default; /* 79bbff */
+$fox--color-success-light-4: mix($fox--color-white, $fox--color-success, 40%) !default; /* 8cc5ff */
+$fox--color-success-light-5: mix($fox--color-white, $fox--color-success, 50%) !default; /* a0cfff */
+$fox--color-success-light-6: mix($fox--color-white, $fox--color-success, 60%) !default; /* b3d8ff */
+$fox--color-success-light-7: mix($fox--color-white, $fox--color-success, 70%) !default; /* c6e2ff */
+$fox--color-success-light-8: mix($fox--color-white, $fox--color-success, 80%) !default; /* d9ecff */
+$fox--color-success-light-9: mix($fox--color-white, $fox--color-success, 90%) !default; /* ecf5ff */
 /// color|1|SecondaryColor|1
-$mx--color-warning: #e6a23c !default;
-$mx--color-warning-light-1: mix($mx--color-white, $mx--color-warning, 10%) !default; /* 53a8ff */
-$mx--color-warning-light-2: mix($mx--color-white, $mx--color-warning, 20%) !default; /* 66b1ff */
-$mx--color-warning-light-3: mix($mx--color-white, $mx--color-warning, 30%) !default; /* 79bbff */
-$mx--color-warning-light-4: mix($mx--color-white, $mx--color-warning, 40%) !default; /* 8cc5ff */
-$mx--color-warning-light-5: mix($mx--color-white, $mx--color-warning, 50%) !default; /* a0cfff */
-$mx--color-warning-light-6: mix($mx--color-white, $mx--color-warning, 60%) !default; /* b3d8ff */
-$mx--color-warning-light-7: mix($mx--color-white, $mx--color-warning, 70%) !default; /* c6e2ff */
-$mx--color-warning-light-8: mix($mx--color-white, $mx--color-warning, 80%) !default; /* d9ecff */
-$mx--color-warning-light-9: mix($mx--color-white, $mx--color-warning, 90%) !default; /* ecf5ff */
+$fox--color-warning: #e6a23c !default;
+$fox--color-warning-light-1: mix($fox--color-white, $fox--color-warning, 10%) !default; /* 53a8ff */
+$fox--color-warning-light-2: mix($fox--color-white, $fox--color-warning, 20%) !default; /* 66b1ff */
+$fox--color-warning-light-3: mix($fox--color-white, $fox--color-warning, 30%) !default; /* 79bbff */
+$fox--color-warning-light-4: mix($fox--color-white, $fox--color-warning, 40%) !default; /* 8cc5ff */
+$fox--color-warning-light-5: mix($fox--color-white, $fox--color-warning, 50%) !default; /* a0cfff */
+$fox--color-warning-light-6: mix($fox--color-white, $fox--color-warning, 60%) !default; /* b3d8ff */
+$fox--color-warning-light-7: mix($fox--color-white, $fox--color-warning, 70%) !default; /* c6e2ff */
+$fox--color-warning-light-8: mix($fox--color-white, $fox--color-warning, 80%) !default; /* d9ecff */
+$fox--color-warning-light-9: mix($fox--color-white, $fox--color-warning, 90%) !default; /* ecf5ff */
 /// color|1|SecondaryColor|1
-$mx--color-danger: #f56c6c !default;
-$mx--color-danger-light-1: mix($mx--color-white, $mx--color-danger, 10%) !default; /* 53a8ff */
-$mx--color-danger-light-2: mix($mx--color-white, $mx--color-danger, 20%) !default; /* 66b1ff */
-$mx--color-danger-light-3: mix($mx--color-white, $mx--color-danger, 30%) !default; /* 79bbff */
-$mx--color-danger-light-4: mix($mx--color-white, $mx--color-danger, 40%) !default; /* 8cc5ff */
-$mx--color-danger-light-5: mix($mx--color-white, $mx--color-danger, 50%) !default; /* a0cfff */
-$mx--color-danger-light-6: mix($mx--color-white, $mx--color-danger, 60%) !default; /* b3d8ff */
-$mx--color-danger-light-7: mix($mx--color-white, $mx--color-danger, 70%) !default; /* c6e2ff */
-$mx--color-danger-light-8: mix($mx--color-white, $mx--color-danger, 80%) !default; /* d9ecff */
-$mx--color-danger-light-9: mix($mx--color-white, $mx--color-danger, 90%) !default; /* ecf5ff */
+$fox--color-danger: #f56c6c !default;
+$fox--color-danger-light-1: mix($fox--color-white, $fox--color-danger, 10%) !default; /* 53a8ff */
+$fox--color-danger-light-2: mix($fox--color-white, $fox--color-danger, 20%) !default; /* 66b1ff */
+$fox--color-danger-light-3: mix($fox--color-white, $fox--color-danger, 30%) !default; /* 79bbff */
+$fox--color-danger-light-4: mix($fox--color-white, $fox--color-danger, 40%) !default; /* 8cc5ff */
+$fox--color-danger-light-5: mix($fox--color-white, $fox--color-danger, 50%) !default; /* a0cfff */
+$fox--color-danger-light-6: mix($fox--color-white, $fox--color-danger, 60%) !default; /* b3d8ff */
+$fox--color-danger-light-7: mix($fox--color-white, $fox--color-danger, 70%) !default; /* c6e2ff */
+$fox--color-danger-light-8: mix($fox--color-white, $fox--color-danger, 80%) !default; /* d9ecff */
+$fox--color-danger-light-9: mix($fox--color-white, $fox--color-danger, 90%) !default; /* ecf5ff */
 /// color|1|SecondaryColor|1
-$mx--color-info: #909399 !default;
-$mx--color-info-light-1: mix($mx--color-white, $mx--color-info, 10%) !default; /* 53a8ff */
-$mx--color-info-light-2: mix($mx--color-white, $mx--color-info, 20%) !default; /* 66b1ff */
-$mx--color-info-light-3: mix($mx--color-white, $mx--color-info, 30%) !default; /* 79bbff */
-$mx--color-info-light-4: mix($mx--color-white, $mx--color-info, 40%) !default; /* 8cc5ff */
-$mx--color-info-light-5: mix($mx--color-white, $mx--color-info, 50%) !default; /* a0cfff */
-$mx--color-info-light-6: mix($mx--color-white, $mx--color-info, 60%) !default; /* b3d8ff */
-$mx--color-info-light-7: mix($mx--color-white, $mx--color-info, 70%) !default; /* c6e2ff */
-$mx--color-info-light-8: mix($mx--color-white, $mx--color-info, 80%) !default; /* d9ecff */
-$mx--color-info-light-9: mix($mx--color-white, $mx--color-info, 90%) !default; /* ecf5ff */
+$fox--color-info: #909399 !default;
+$fox--color-info-light-1: mix($fox--color-white, $fox--color-info, 10%) !default; /* 53a8ff */
+$fox--color-info-light-2: mix($fox--color-white, $fox--color-info, 20%) !default; /* 66b1ff */
+$fox--color-info-light-3: mix($fox--color-white, $fox--color-info, 30%) !default; /* 79bbff */
+$fox--color-info-light-4: mix($fox--color-white, $fox--color-info, 40%) !default; /* 8cc5ff */
+$fox--color-info-light-5: mix($fox--color-white, $fox--color-info, 50%) !default; /* a0cfff */
+$fox--color-info-light-6: mix($fox--color-white, $fox--color-info, 60%) !default; /* b3d8ff */
+$fox--color-info-light-7: mix($fox--color-white, $fox--color-info, 70%) !default; /* c6e2ff */
+$fox--color-info-light-8: mix($fox--color-white, $fox--color-info, 80%) !default; /* d9ecff */
+$fox--color-info-light-9: mix($fox--color-white, $fox--color-info, 90%) !default; /* ecf5ff */
 
-$mx--color-success-light: mix($mx--color-white, $mx--color-success, 80%) !default;
-$mx--color-warning-light: mix($mx--color-white, $mx--color-warning, 80%) !default;
-$mx--color-danger-light: mix($mx--color-white, $mx--color-danger, 80%) !default;
-$mx--color-info-light: mix($mx--color-white, $mx--color-info, 80%) !default;
+$fox--color-success-light: mix($fox--color-white, $fox--color-success, 80%) !default;
+$fox--color-warning-light: mix($fox--color-white, $fox--color-warning, 80%) !default;
+$fox--color-danger-light: mix($fox--color-white, $fox--color-danger, 80%) !default;
+$fox--color-info-light: mix($fox--color-white, $fox--color-info, 80%) !default;
 
-$mx--color-success-lighter: mix($mx--color-white, $mx--color-success, 90%) !default;
-$mx--color-warning-lighter: mix($mx--color-white, $mx--color-warning, 90%) !default;
-$mx--color-danger-lighter: mix($mx--color-white, $mx--color-danger, 90%) !default;
-$mx--color-info-lighter: mix($mx--color-white, $mx--color-info, 90%) !default;
+$fox--color-success-lighter: mix($fox--color-white, $fox--color-success, 90%) !default;
+$fox--color-warning-lighter: mix($fox--color-white, $fox--color-warning, 90%) !default;
+$fox--color-danger-lighter: mix($fox--color-white, $fox--color-danger, 90%) !default;
+$fox--color-info-lighter: mix($fox--color-white, $fox--color-info, 90%) !default;
 
 /// color|1|FontColor|2
-$mx--color-text-primary: #303133 !default;
+$fox--color-text-primary: #303133 !default;
 /// color|1|FontColor|2
-$mx--color-text-regular: #606266 !default;
+$fox--color-text-regular: #606266 !default;
 /// color|1|FontColor|2
-$mx--color-text-secondary: #909399 !default;
+$fox--color-text-secondary: #909399 !default;
 /// color|1|FontColor|2
-$mx--color-text-placeholder: #c0c4cc !default;
+$fox--color-text-placeholder: #c0c4cc !default;
 /// color|1|BorderColor|3
-$mx--border-color-base: #dcdfe6 !default;
+$fox--border-color-base: #dcdfe6 !default;
 /// color|1|BorderColor|3
-$mx--border-color-light: #e4e7ed !default;
+$fox--border-color-light: #e4e7ed !default;
 /// color|1|BorderColor|3
-$mx--border-color-lighter: #ebeef5 !default;
+$fox--border-color-lighter: #ebeef5 !default;
 /// color|1|BorderColor|3
-$mx--border-color-extra-light: #f2f6fc !default;
+$fox--border-color-extra-light: #f2f6fc !default;
 
 /* Transition
 -------------------------- */
-$mx--all-transition: all .3s cubic-bezier(.645, .045, .355, 1) !default;
-$mx--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
-$mx--fade-linear-transition: opacity 200ms linear !default;
-$mx--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
-$mx--border-transition-base: border-color .2s cubic-bezier(.645, .045, .355, 1) !default;
-$mx--color-transition-base: color .2s cubic-bezier(.645, .045, .355, 1) !default;
+$fox--all-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+$fox--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$fox--fade-linear-transition: opacity 200ms linear !default;
+$fox--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$fox--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+$fox--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 
 /* Typography font
 -------------------------- */
-$mx--font-path: 'fonts' !default;
+$fox--font-path: "fonts" !default;
 /// fontSize|1|FontSize|0   暂未使用
-$mx--font-size-extra-large: 20px !default;
+$fox--font-size-extra-large: 20px !default;
 /// fontSize|1|FontSize|0
-$mx--font-size-large: 18px !default;
+$fox--font-size-large: 18px !default;
 /// fontSize|1|FontSize|0
-$mx--font-size-medium: 16px !default;
+$fox--font-size-medium: 16px !default;
 /// fontSize|1|FontSize|0
-$mx--font-size-base: 14px !default;
+$fox--font-size-base: 14px !default;
 /// fontSize|1|FontSize|0
-$mx--font-size-small: 13px !default;
+$fox--font-size-small: 13px !default;
 /// fontSize|1|FontSize|0
-$mx--font-size-extra-small: 12px !default;
+$fox--font-size-extra-small: 12px !default;
 /// fontWeight|1|FontWeight|1
-$mx--font-weight-primary: 500 !default;
+$fox--font-weight-primary: 500 !default;
 /// fontWeight|1|FontWeight|1
-$mx--font-weight-secondary: 100 !default;
+$fox--font-weight-secondary: 100 !default;
 /// fontLineHeight|1|LineHeight|2
-$mx--font-line-height-primary: 24px !default;
+$fox--font-line-height-primary: 24px !default;
 /// fontLineHeight|1|LineHeight|2
-$mx--font-line-height-secondary: 16px !default;
-$mx--font-color-disabled-base: #bbb !default;
+$fox--font-line-height-secondary: 16px !default;
+$fox--font-color-disabled-base: #bbb !default;
 /* Size
 -------------------------- */
-$mx--size-base: 14px !default;
+$fox--size-base: 14px !default;
 
 /* z-index
 -------------------------- */
-$mx--index-normal: 1 !default;
-$mx--index-top: 1000 !default;
-$mx--index-popper: 2000 !default;
+$fox--index-normal: 1 !default;
+$fox--index-top: 1000 !default;
+$fox--index-popper: 2000 !default;
 
 // Box-shadow
 /// boxShadow|1|Shadow|1
-$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04) !default;
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04) !default;
 // boxShadow|1|Shadow|1
-$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12) !default;
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12) !default;
 /// boxShadow|1|Shadow|1
 $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
 
 /* Icon
 -------------------------- */
-$mx--icon-color: #666 !default;
-$mx--icon-color-base: $mx--color-info !default;
+$fox--icon-color: #666 !default;
+$fox--icon-color-base: $fox--color-info !default;
 
 /* Timeline
 --------------------------*/
-$mx--timeline-node-size-normal: 12px !default;
-$mx--timeline-node-size-large: 14px !default;
-$mx--timeline-node-color: $mx--border-color-light !default;
+$fox--timeline-node-size-normal: 12px !default;
+$fox--timeline-node-size-large: 14px !default;
+$fox--timeline-node-color: $fox--border-color-light !default;
 
 /* Divider
 --------------------------*/
-$mx--divider-font-size-base: $mx--font-size-base;
-$mx--timeline-font-size-small: 12px !default;
-$mx--timeline-font-color-base: $mx--color-text-primary;
-$mx--timeline-border-style-base: solid !default;
-$mx--timeline-border-color-base: $mx--border-color-light;
-$mx--timeline-background-color-base: $mx--border-color-light;
+$fox--divider-font-size-base: $fox--font-size-base;
+$fox--timeline-font-size-small: 12px !default;
+$fox--timeline-font-color-base: $fox--color-text-primary;
+$fox--timeline-border-style-base: solid !default;
+$fox--timeline-border-color-base: $fox--border-color-light;
+$fox--timeline-background-color-base: $fox--border-color-light;
 
 /* Tree
 --------------------------*/
 
 /* Select
 --------------------------*/
-$mx--select-option-hoer: #f5f6f7;
+$fox--select-option-hoer: #f5f6f7;
 
 /* Table
 --------------------------*/
-$mx--border-color: $mx-border-color-default;
-$mx--header-font-color: $mx--color-text-primary;
-$mx--body-font-color: $mx--color-text-regular;
+$fox--border-color: $fox-border-color-default;
+$fox--header-font-color: $fox--color-text-primary;
+$fox--body-font-color: $fox--color-text-regular;
 
 /* radio 单选框
 --------------------------*/
-$mx--radio-text-color-disabled: $mx--color-text-placeholder !default;
-$mx--radio-background-color-disabled: $mx--border-color-extra-light !default;
-$mx--radio-border-color: $mx--border-color-base !default;
+$fox--radio-text-color-disabled: $fox--color-text-placeholder !default;
+$fox--radio-background-color-disabled: $fox--border-color-extra-light !default;
+$fox--radio-border-color: $fox--border-color-base !default;
 
 /* checkbox 复选框
 --------------------------*/
-$mx--checkbox-text-color-disabled: $mx--color-text-placeholder !default;
-$mx--checkbox-background-color-disabled: $mx--border-color-extra-light !default;
-$mx--checkbox-border-color: $mx--border-color-base !default;
+$fox--checkbox-text-color-disabled: $fox--color-text-placeholder !default;
+$fox--checkbox-background-color-disabled: $fox--border-color-extra-light !default;
+$fox--checkbox-border-color: $fox--border-color-base !default;

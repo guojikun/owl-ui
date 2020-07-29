@@ -1,7 +1,7 @@
-import mxAside from "./src/aside.vue";
+import Aside from "./src/aside.vue";
 
-mxAside.install = Vue => {
-    Vue.component(mxAside.name, mxAside);
+Aside.install = Vue => {
+    Vue.component(`fox${Aside.name}`, Aside);
 };
 
-export default mxAside;
+export default Aside;

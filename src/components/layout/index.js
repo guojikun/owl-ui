@@ -1,7 +1,7 @@
-import mxLayout from "./src/layout.vue";
+import Layout from "./src/layout.vue";
 
-mxLayout.install = Vue => {
-    Vue.component(mxLayout.name, mxLayout);
+Layout.install = Vue => {
+    Vue.component(`fox${Layout.name}`, Layout);
 };
 
-export default mxLayout;
+export default Layout;

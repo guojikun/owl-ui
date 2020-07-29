@@ -1,7 +1,7 @@
-import mxFooter from "./src/footer.vue";
+import Footer from "./src/footer.vue";
 
-mxFooter.install = Vue => {
-    Vue.component(mxFooter.name, mxFooter);
+Footer.install = Vue => {
+    Vue.component(`fox${Footer.name}`, Footer);
 };
 
-export default mxFooter;
+export default Footer;

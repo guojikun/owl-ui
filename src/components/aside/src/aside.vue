@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-layout-aside" :style="getWidth">
+    <div class="fox-layout-aside" :style="getWidth">
         <slot></slot>
     </div>
 </template>
@@ -21,7 +21,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.mx-layout-aside {
+.fox-layout-aside {
     box-sizing: border-box;
     flex-shrink: 0;
     overflow: auto;

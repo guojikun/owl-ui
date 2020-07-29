@@ -1,12 +1,12 @@
 <template>
-    <div class="mx-layout" :class="['is-' + dir]">
+    <div class="fox-layout" :class="['is-' + dir]">
         <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: "mxLayout",
+    name: "Layout",
     props: {
         direction: {
             type: String,
@@ -23,7 +23,7 @@ export default {
             let children = this.$slots.default;
             const tmp = children.filter(cur => {
                 if (cur.componentOptions !== undefined)
-                    return cur.componentOptions.tag == "mx-header" || cur.componentOptions.tag == "mx-footer";
+                    return cur.componentOptions.tag == "fox-header" || cur.componentOptions.tag == "fox-footer";
             });
             if (tmp && tmp.length > 0) {
                 return "horizontal";
@@ -35,7 +35,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.mx-layout {
+.fox-layout {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;

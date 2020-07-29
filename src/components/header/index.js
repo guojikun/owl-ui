@@ -1,7 +1,7 @@
-import mxHeader from "./src/header.vue";
+import Header from "./src/header.vue";
 
-mxHeader.install = Vue => {
-    Vue.component(mxHeader.name, mxHeader);
+Header.install = Vue => {
+    Vue.component(`fox${Header.name}`, Header);
 };
 
-export default mxHeader;
+export default Header;

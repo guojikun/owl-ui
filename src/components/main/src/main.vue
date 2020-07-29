@@ -1,12 +1,12 @@
 <template>
-    <div class="mx-layout-main" :style="[styles]">
+    <div class="fox-layout-main" :style="[styles]">
         <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: "mxMain",
+    name: "Main",
     props: {
         styles: {
             type: Object,
@@ -20,7 +20,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.mx-layout-main {
+.fox-layout-main {
     box-sizing: border-box;
     overflow: auto;
     display: block;
