@@ -1,7 +1,7 @@
-import mxRadioGroup from "./src/index.vue";
+import RadioGroup from "./src/index.vue";
 
-mxRadioGroup.install = Vue => {
-    Vue.component(mxRadioGroup.name, mxRadioGroup);
+RadioGroup.install = Vue => {
+    Vue.component(`fox${RadioGroup.name}`, RadioGroup);
 };
 
-export default mxRadioGroup;
+export default RadioGroup;

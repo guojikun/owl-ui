@@ -1,12 +1,12 @@
 <template>
-    <div class="mx-alert" :class="getType" :style="getColor">
+    <div class="fox-alert" :class="getType" :style="getColor">
         <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: "mxAlert",
+    name: "Alert",
     props: {
         type: {
             type: String,
@@ -48,30 +48,30 @@ export default {
 </script>
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-alert {
+.fox-alert {
     padding: 10px 20px;
-    background-color: $mx--color-primary-light-8;
-    border-left: 6px solid $mx--color-primary;
+    background-color: $fox--color-primary-light-8;
+    border-left: 6px solid $fox--color-primary;
     border-radius: 4px;
     line-height: 1.8em;
     & + & {
         margin-top: 20px;
     }
     &.is-success {
-        border-left-color: $mx--color-success;
-        background-color: $mx--color-success-light;
+        border-left-color: $fox--color-success;
+        background-color: $fox--color-success-light;
     }
     &.is-danger {
-        border-left-color: $mx--color-danger;
-        background-color: $mx--color-danger-light;
+        border-left-color: $fox--color-danger;
+        background-color: $fox--color-danger-light;
     }
     &.is-warning {
-        border-left-color: $mx--color-warning;
-        background-color: $mx--color-warning-light;
+        border-left-color: $fox--color-warning;
+        background-color: $fox--color-warning-light;
     }
     &.is-info {
-        border-left-color: $mx--color-info;
-        background-color: $mx--color-info-light;
+        border-left-color: $fox--color-info;
+        background-color: $fox--color-info-light;
     }
 }
 </style>

@@ -1,7 +1,7 @@
-import mxAlert from "./src/alert.vue";
+import Alert from "./src/alert.vue";
 
-mxAlert.install = vue => {
-    vue.component(mxAlert.name, mxAlert);
+Alert.install = vue => {
+    vue.component(`fox${Alert.name}`, Alert);
 };
 
-export default mxAlert;
+export default Alert;

@@ -1,6 +1,6 @@
-import mxTag from "./src/index.vue";
+import Tag from "./src/index.vue";
 
-mxTag.install = vue => {
-    vue.component(mxTag.name, mxTag);
+Tag.install = vue => {
+    vue.component(`fox${Tag.name}`, Tag);
 };
-export default mxTag;
+export default Tag;

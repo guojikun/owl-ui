@@ -1,5 +1,5 @@
 <template>
-    <div :class="['mx-steps', `mx-steps-${direction}`]">
+    <div :class="['fox-steps', `fox-steps-${direction}`]">
         <slot></slot>
     </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 import { findComponentsDownward } from "@/utils/findComponent.js";
 export default {
-    name: "mxSteps",
+    name: "Steps",
     props: {
         active: {
             type: Number,
@@ -39,7 +39,7 @@ export default {
         },
     },
     mounted() {
-        const children = findComponentsDownward(this, "mxStep");
+        const children = findComponentsDownward(this, "Step");
         children.map((cur, i) => {
             cur.updateIndex(i + 1);
         });
@@ -47,7 +47,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.mx-steps {
+.fox-steps {
     display: flex;
     width: 100%;
     font-size: 0;

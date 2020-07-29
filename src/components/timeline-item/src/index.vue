@@ -1,31 +1,31 @@
 <template>
-    <li class="mx-timeline-item">
-        <div class="mx-timeline-item__tail"></div>
+    <li class="fox-timeline-item">
+        <div class="fox-timeline-item__tail"></div>
 
         <div
             v-if="!$slots.dot"
-            class="mx-timeline-item__node"
-            :class="[`mx-timeline-item__node--${size || ''}`, `mx-timeline-item__node--${type || ''}`]"
+            class="fox-timeline-item__node"
+            :class="[`fox-timeline-item__node--${size || ''}`, `fox-timeline-item__node--${type || ''}`]"
             :style="{
                 backgroundColor: color,
             }"
         >
-            <i v-if="icon" class="mx-timeline-item__icon" :class="icon"></i>
+            <i v-if="icon" class="fox-timeline-item__icon" :class="icon"></i>
         </div>
-        <div v-if="$slots.dot" class="mx-timeline-item__dot">
+        <div v-if="$slots.dot" class="fox-timeline-item__dot">
             <slot name="dot"></slot>
         </div>
 
-        <div class="mx-timeline-item__wrapper">
-            <div v-if="!hideTimestamp && placement === 'top'" class="mx-timeline-item__timestamp is-top">
+        <div class="fox-timeline-item__wrapper">
+            <div v-if="!hideTimestamp && placement === 'top'" class="fox-timeline-item__timestamp is-top">
                 {{ timestamp }}
             </div>
 
-            <div class="mx-timeline-item__content">
+            <div class="fox-timeline-item__content">
                 <slot></slot>
             </div>
 
-            <div v-if="!hideTimestamp && placement === 'bottom'" class="mx-timeline-item__timestamp is-bottom">
+            <div v-if="!hideTimestamp && placement === 'bottom'" class="fox-timeline-item__timestamp is-bottom">
                 {{ timestamp }}
             </div>
         </div>
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-    name: "mxTimelineItem",
+    name: "TimelineItem",
     inject: ["timeline"],
     props: {
         timestamp: String,
@@ -70,7 +70,7 @@ export default {
 
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-timeline-item {
+.fox-timeline-item {
     position: relative;
     padding-bottom: 20px;
 
@@ -84,17 +84,17 @@ export default {
         position: absolute;
         left: 4px;
         height: 100%;
-        border-left: 2px solid $mx--timeline-node-color;
+        border-left: 2px solid $fox--timeline-node-color;
     }
 
     &__icon {
-        color: $mx--color-white;
-        font-size: $mx--font-size-small;
+        color: $fox--color-white;
+        font-size: $fox--font-size-small;
     }
 
     &__node {
         position: absolute;
-        background-color: $mx--timeline-node-color;
+        background-color: $fox--timeline-node-color;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -102,34 +102,34 @@ export default {
 
         &--normal {
             left: -1px;
-            width: $mx--timeline-node-size-normal;
-            height: $mx--timeline-node-size-normal;
+            width: $fox--timeline-node-size-normal;
+            height: $fox--timeline-node-size-normal;
         }
 
         &--large {
             left: -2px;
-            width: $mx--timeline-node-size-large;
-            height: $mx--timeline-node-size-large;
+            width: $fox--timeline-node-size-large;
+            height: $fox--timeline-node-size-large;
         }
 
         &--primary {
-            background-color: $mx-primary;
+            background-color: $fox-primary;
         }
 
         &--success {
-            background-color: $mx-success;
+            background-color: $fox-success;
         }
 
         &--warning {
-            background-color: $mx-warning;
+            background-color: $fox-warning;
         }
 
         &--danger {
-            background-color: $mx-danger;
+            background-color: $fox-danger;
         }
 
         &--info {
-            background-color: $mx-info;
+            background-color: $fox-info;
         }
     }
 
@@ -141,13 +141,13 @@ export default {
     }
 
     &__content {
-        color: $mx-primary;
+        color: $fox-primary;
     }
 
     &__timestamp {
-        color: $mx--color-text-secondary;
+        color: $fox--color-text-secondary;
         line-height: 1;
-        font-size: $mx--font-size-small;
+        font-size: $fox--font-size-small;
 
         &.is-top {
             margin-bottom: 8px;

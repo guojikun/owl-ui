@@ -1,12 +1,12 @@
 <template>
-    <div class="mx-cell-group" :class="[{ 'is-border': border }]">
+    <div class="fox-cell-group" :class="[{ 'is-border': border }]">
         <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: "mxCellGroup",
+    name: "CellGroup",
     props: {
         border: {
             type: Boolean,

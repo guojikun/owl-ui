@@ -1,7 +1,7 @@
-import mxCol from "./src/col.vue";
+import Col from "./src/col.vue";
 
-mxCol.install = vue => {
-    vue.component(mxCol.name, mxCol);
+Col.install = vue => {
+    vue.component(`fox${Col.name}`, Col);
 };
 
-export default mxCol;
+export default Col;

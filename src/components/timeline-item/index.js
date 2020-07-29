@@ -1,7 +1,7 @@
-import mxTimelineItem from "./src/index.vue";
+import TimelineItem from "./src/index.vue";
 
-mxTimelineItem.install = Vue => {
-    Vue.component(mxTimelineItem.name, mxTimelineItem);
+TimelineItem.install = Vue => {
+    Vue.component(`fox${TimelineItem.name}`, TimelineItem);
 };
 
-export default mxTimelineItem;
+export default TimelineItem;

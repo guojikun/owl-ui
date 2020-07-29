@@ -1,14 +1,14 @@
 <template>
-    <div class="mx-collapse-item" :class="[{ 'mx-collapse-item-active': isActive }]">
-        <div class="mx-collapse-item__header" @click="handleChange">
-            <mx-icon name="ios-arrow-forward" :class="['mx-icon-right', `mx-collapse-arrow-${getArrow}`]"> </mx-icon>
+    <div class="fox-collapse-item" :class="[{ 'fox-collapse-item-active': isActive }]">
+        <div class="fox-collapse-item__header" @click="handleChange">
+            <fox-icon name="ios-arrow-forward" :class="['fox-icon-right', `fox-collapse-arrow-${getArrow}`]"> </fox-icon>
             <span>
                 <slot name="title">{{ title }}</slot>
             </span>
         </div>
         <collapse-transition>
-            <div v-show="isActive" class="mx-collapse-item__wrap">
-                <div class="mx-collapse-item__wrap-box">
+            <div v-show="isActive" class="fox-collapse-item__wrap">
+                <div class="fox-collapse-item__wrap-box">
                     <slot></slot>
                 </div>
             </div>
@@ -19,10 +19,10 @@
 <script>
 import { findBrothersComponents } from "@/utils/findComponent.js";
 import CollapseTransition from "@/utils/collapse-transition.js";
-import MxIcon from "pkg/icon/index.js";
+import Icon from "pkg/icon/index.js";
 export default {
-    name: "mxCollapseItem",
-    components: { MxIcon, CollapseTransition },
+    name: "CollapseItem",
+    components: { Icon, CollapseTransition },
     props: {
         value: [String, Array],
         accordion: {
@@ -39,9 +39,9 @@ export default {
     methods: {
         init() {
             const parent = this.$parent;
-            const flag = parent.$options.name !== "mxCollapse";
+            const flag = parent.$options.name !== "Collapse";
             if (flag) {
-                throw new Error("mx-collapse-item组件的父组件必须是mx-collapse");
+                throw new Error("fox-collapse-item组件的父组件必须是fox-collapse");
             }
         },
         handleChange() {
@@ -68,7 +68,7 @@ export default {
     computed: {
         getName() {
             const uid = this._uid;
-            const borthers = findBrothersComponents(this, "mxCollapseItem", false);
+            const borthers = findBrothersComponents(this, "CollapseItem", false);
             const tmp = borthers.map(item => {
                 return item._uid;
             });
@@ -98,7 +98,7 @@ export default {
 <style lang="scss">
 @import "@/styles/common/var.scss";
 @import "@/styles/common/transition.scss";
-.mx-collapse-item {
+.fox-collapse-item {
     position: relative;
     & + & {
         border-top: 1px solid #dcdee2;
@@ -113,18 +113,18 @@ export default {
         border-bottom: 1px solid transparent;
         font-size: 14px;
         /* transition: all 0.3s ease-in-out; */
-        & > .mx-icon-right {
+        & > .fox-icon-right {
             transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
             margin-right: 10px;
         }
-        & > .mx-icon-right.mx-collapse-arrow-right {
+        & > .fox-icon-right.fox-collapse-arrow-right {
             position: absolute;
             right: 0;
             top: 50%;
             margin-top: -7px;
             margin-right: 16px;
         }
-        & > .mx-icon-right.mx-collapse-arrow-none {
+        & > .fox-icon-right.fox-collapse-arrow-none {
             display: none;
         }
     }
@@ -142,9 +142,9 @@ export default {
         }
     }
 }
-.mx-collapse-item-active {
-    .mx-collapse-item__header {
-        & > .mx-icon-right {
+.fox-collapse-item-active {
+    .fox-collapse-item__header {
+        & > .fox-icon-right {
             transform: rotateZ(90deg);
         }
     }

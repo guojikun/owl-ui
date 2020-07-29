@@ -1,6 +1,6 @@
-import mxCellGroup from "./src/cell-group.vue";
+import CellGroup from "./src/cell-group.vue";
 
-mxCellGroup.install = vue => {
-    vue.component(mxCellGroup.name, mxCellGroup);
+CellGroup.install = vue => {
+    vue.component(`fox${CellGroup.name}`, CellGroup);
 };
-export default mxCellGroup;
+export default CellGroup;

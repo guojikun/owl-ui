@@ -1,12 +1,12 @@
 <template>
-    <div class="mx-breadcrumb">
+    <div class="fox-breadcrumb">
         <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: "MxBreadcrumb",
+    name: "Breadcrumb",
     props: {
         separator: {
             type: String,
@@ -21,7 +21,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.mx-breadcrumb {
+.fox-breadcrumb {
     color: #999;
     font-size: 14px;
 }

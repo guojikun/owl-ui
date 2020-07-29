@@ -1,7 +1,7 @@
-import mxTable from "./src/table.vue";
+import Table from "./src/table.vue";
 
-mxTable.install = vue => {
-    vue.component(mxTable.name, mxTable);
+Table.install = vue => {
+    vue.component(`fox${Table.name}`, Table);
 };
 
-export default mxTable;
+export default Table;

@@ -1,17 +1,17 @@
 <template>
     <transition :name="transfer">
-        <span class="mx-tag" :class="['mx-tag--' + theme, `mx-tag--${theme}-${type}`, `mx-tag--${size}`]" @click="clicks">
+        <span class="fox-tag" :class="['fox-tag--' + theme, `fox-tag--${theme}-${type}`, `fox-tag--${size}`]" @click="clicks">
             <slot></slot>
-            <mx-icon class="mx-tag-close" name="ios-close" v-if="closable" @click="closed"> </mx-icon>
+            <fox-icon class="fox-tag-close" name="ios-close" v-if="closable" @click="closed"> </fox-icon>
         </span>
     </transition>
 </template>
 
 <script>
-import mxIcon from "../../icon/index.js";
+import Icon from "../../icon/index.js";
 export default {
-    name: "mxTag",
-    components: { mxIcon },
+    name: "Tag",
+    components: { Icon },
     props: {
         type: {
             type: String,
@@ -56,14 +56,14 @@ export default {
     },
     computed: {
         transfer() {
-            return this.disableTransitions ? "" : "mx-zoom-in-center";
+            return this.disableTransitions ? "" : "fox-zoom-in-center";
         },
     },
 };
 </script>
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-tag {
+.fox-tag {
     display: inline-block;
     padding: 0 10px;
     height: 28px;
@@ -77,93 +77,93 @@ export default {
         margin-left: 10px;
     }
     &--light {
-        color: $mx--color-primary;
-        border-color: $mx--color-primary-light-8;
-        background-color: $mx--color-primary-light-9;
+        color: $fox--color-primary;
+        border-color: $fox--color-primary-light-8;
+        background-color: $fox--color-primary-light-9;
         &-primary {
-            color: $mx--color-primary;
-            border-color: $mx--color-primary-light-8;
-            background-color: $mx--color-primary-light-9;
+            color: $fox--color-primary;
+            border-color: $fox--color-primary-light-8;
+            background-color: $fox--color-primary-light-9;
         }
         &-success {
-            color: $mx--color-success;
-            border-color: $mx--color-success-light-8;
-            background-color: $mx--color-success-light-9;
+            color: $fox--color-success;
+            border-color: $fox--color-success-light-8;
+            background-color: $fox--color-success-light-9;
         }
         &-warning {
-            color: $mx--color-warning;
-            border-color: $mx--color-warning-light-8;
-            background-color: $mx--color-warning-light-9;
+            color: $fox--color-warning;
+            border-color: $fox--color-warning-light-8;
+            background-color: $fox--color-warning-light-9;
         }
         &-danger {
-            color: $mx--color-danger;
-            border-color: $mx--color-danger-light-8;
-            background-color: $mx--color-danger-light-9;
+            color: $fox--color-danger;
+            border-color: $fox--color-danger-light-8;
+            background-color: $fox--color-danger-light-9;
         }
         &-info {
-            color: $mx--color-info;
-            border-color: $mx--color-info-light-8;
-            background-color: $mx--color-info-light-9;
+            color: $fox--color-info;
+            border-color: $fox--color-info-light-8;
+            background-color: $fox--color-info-light-9;
         }
     }
     &--plain {
-        color: $mx--color-primary;
-        border-color: $mx--color-primary-light-6;
-        background-color: $mx--color-white;
+        color: $fox--color-primary;
+        border-color: $fox--color-primary-light-6;
+        background-color: $fox--color-white;
         &-primary {
-            color: $mx--color-primary;
-            border-color: $mx--color-primary-light-6;
-            background-color: $mx--color-white;
+            color: $fox--color-primary;
+            border-color: $fox--color-primary-light-6;
+            background-color: $fox--color-white;
         }
         &-success {
-            color: $mx--color-success;
-            border-color: $mx--color-success-light-6;
-            background-color: $mx--color-white;
+            color: $fox--color-success;
+            border-color: $fox--color-success-light-6;
+            background-color: $fox--color-white;
         }
         &-warning {
-            color: $mx--color-warning;
-            border-color: $mx--color-warning-light-6;
-            background-color: $mx--color-white;
+            color: $fox--color-warning;
+            border-color: $fox--color-warning-light-6;
+            background-color: $fox--color-white;
         }
         &-danger {
-            color: $mx--color-danger;
-            border-color: $mx--color-danger-light-6;
-            background-color: $mx--color-white;
+            color: $fox--color-danger;
+            border-color: $fox--color-danger-light-6;
+            background-color: $fox--color-white;
         }
         &-info {
-            color: $mx--color-info;
-            border-color: $mx--color-info-light-6;
-            background-color: $mx--color-white;
+            color: $fox--color-info;
+            border-color: $fox--color-info-light-6;
+            background-color: $fox--color-white;
         }
     }
     &--dark {
-        color: $mx--color-white;
-        border-color: $mx--color-primary;
-        background-color: $mx--color-primary;
+        color: $fox--color-white;
+        border-color: $fox--color-primary;
+        background-color: $fox--color-primary;
         &-primary {
-            color: $mx--color-white;
-            border-color: $mx--color-primary;
-            background-color: $mx--color-primary;
+            color: $fox--color-white;
+            border-color: $fox--color-primary;
+            background-color: $fox--color-primary;
         }
         &-success {
-            color: $mx--color-white;
-            border-color: $mx--color-success;
-            background-color: $mx--color-success;
+            color: $fox--color-white;
+            border-color: $fox--color-success;
+            background-color: $fox--color-success;
         }
         &-warning {
-            color: $mx--color-white;
-            border-color: $mx--color-warning;
-            background-color: $mx--color-warning;
+            color: $fox--color-white;
+            border-color: $fox--color-warning;
+            background-color: $fox--color-warning;
         }
         &-danger {
-            color: $mx--color-white;
-            border-color: $mx--color-danger;
-            background-color: $mx--color-danger;
+            color: $fox--color-white;
+            border-color: $fox--color-danger;
+            background-color: $fox--color-danger;
         }
         &-info {
-            color: $mx--color-white;
-            border-color: $mx--color-info;
-            background-color: $mx--color-info;
+            color: $fox--color-white;
+            border-color: $fox--color-info;
+            background-color: $fox--color-info;
         }
     }
     &-close {
@@ -174,8 +174,8 @@ export default {
         top: 0.5px;
         cursor: pointer;
         &:hover {
-            background-color: $mx--color-info;
-            color: $mx--color-white;
+            background-color: $fox--color-info;
+            color: $fox--color-white;
         }
     }
     &--large {
@@ -195,8 +195,8 @@ export default {
         font-size: 16px;
         top: 1px;
         &:hover {
-            background-color: $mx--color-info;
-            color: $mx--color-white;
+            background-color: $fox--color-info;
+            color: $fox--color-white;
         }
     }
     &--small &-close,
@@ -204,8 +204,8 @@ export default {
         font-size: 12px;
         top: 0px;
         &:hover {
-            background-color: $mx--color-info;
-            color: $mx--color-white;
+            background-color: $fox--color-info;
+            color: $fox--color-white;
         }
     }
 }

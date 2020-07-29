@@ -1,7 +1,7 @@
-import mxRate from "./src/index.vue";
+import Rate from "./src/index.vue";
 
-mxRate.install = Vue => {
-    Vue.component(mxRate.name, mxRate);
+Rate.install = Vue => {
+    Vue.component(`fox${Rate.name}`, Rate);
 };
 
-export default mxRate;
+export default Rate;

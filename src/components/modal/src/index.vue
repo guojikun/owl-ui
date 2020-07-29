@@ -27,9 +27,9 @@
 import { oneOf } from "@/utils/assist.js";
 import Popper from "@/utils/vue-popper.js";
 import { transferIndex, transferIncrease } from "@/utils/transfer-queue";
-const prefixCls = "mx-tooltip";
+const prefixCls = "fox-tooltip";
 export default {
-    name: "mxTooltip",
+    name: "Tooltip",
     mixins: [Popper],
     props: {
         placement: {
@@ -151,10 +151,10 @@ export default {
 };
 </script>
 <style lang="scss">
-.mx-tooltip {
+.fox-tooltip {
     display: inline-block;
     &-rel {
-        @extend .mx-tooltip;
+        @extend .fox-tooltip;
         position: relative;
         width: inherit;
     }
@@ -167,97 +167,97 @@ export default {
         z-index: 1060;
         &[x-placement^="top"] {
             padding: 5px 0 8px;
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 bottom: 3px;
                 border-width: 5px 5px 0;
                 border-top-color: rgba(70, 76, 91, 0.9);
             }
         }
         &[x-placement="top"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 left: 50%;
                 margin-left: -5px;
             }
         }
         &[x-placement="top-start"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 left: 16px;
             }
         }
         &[x-placement="top-end"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 right: 16px;
             }
         }
         &[x-placement^="bottom"] {
             padding: 8px 0 5px;
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 top: 3px;
                 border-width: 0 5px 5px;
                 border-bottom-color: rgba(70, 76, 91, 0.9);
             }
         }
         &[x-placement="bottom"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 left: 50%;
                 margin-left: -5px;
             }
         }
         &[x-placement="bottom-start"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 left: 16px;
             }
         }
         &[x-placement="bottom-end"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 right: 16px;
             }
         }
         &[x-placement^="left"] {
             padding: 0 8px 0 5px;
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 right: 3px;
                 border-width: 5px 0 5px 5px;
                 border-left-color: rgba(70, 76, 91, 0.9);
             }
         }
         &[x-placement="left"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 top: 50%;
                 margin-top: -5px;
             }
         }
         &[x-placement="left-start"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 top: 8px;
             }
         }
         &[x-placement="left-end"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 bottom: 8px;
             }
         }
         &[x-placement^="right"] {
             padding: 0 5px 0 8px;
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 left: 3px;
                 border-width: 5px 5px 5px 0;
                 border-right-color: rgba(70, 76, 91, 0.9);
             }
         }
         &[x-placement="right"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 top: 50%;
                 margin-top: -5px;
             }
         }
         &[x-placement="right-start"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 top: 8px;
             }
         }
         &[x-placement="right-end"] {
-            & .mx-tooltip-arrow {
+            & .fox-tooltip-arrow {
                 bottom: 8px;
             }
         }
@@ -282,10 +282,10 @@ export default {
         white-space: nowrap;
     }
     &-light {
-        &.mx-tooltip-popper {
+        &.fox-tooltip-popper {
             &[x-placement^="top"] {
                 padding: 7px 0 10px;
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     bottom: 3px;
                     border-width: 7px 7px 0;
                     border-top-color: hsla(0, 0%, 85%, 0.5);
@@ -300,24 +300,24 @@ export default {
                 }
             }
             &[x-placement="top"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     left: 50%;
                     margin-left: -7px;
                 }
             }
             &[x-placement="top-start"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     left: 16px;
                 }
             }
             &[x-placement="top-end"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     right: 16px;
                 }
             }
             &[x-placement^="bottom"] {
                 padding: 10px 0 7px;
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     top: 3px;
                     border-width: 0 7px 7px;
                     border-bottom-color: hsla(0, 0%, 85%, 0.5);
@@ -332,24 +332,24 @@ export default {
                 }
             }
             &[x-placement="bottom"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     left: 50%;
                     margin-left: -7px;
                 }
             }
             &[x-placement="bottom-start"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     left: 16px;
                 }
             }
             &[x-placement="bottom-end"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     right: 16px;
                 }
             }
             &[x-placement^="left"] {
                 padding: 0 10px 0 7px;
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     right: 3px;
                     border-width: 7px 0 7px 7px;
                     border-left-color: hsla(0, 0%, 85%, 0.5);
@@ -364,24 +364,24 @@ export default {
                 }
             }
             &[x-placement="left"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     top: 50%;
                     margin-top: -7px;
                 }
             }
             &[x-placement="left-start"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     top: 8px;
                 }
             }
             &[x-placement="left-end"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     bottom: 8px;
                 }
             }
             &[x-placement^="right"] {
                 padding: 0 7px 0 10px;
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     left: 3px;
                     border-width: 7px 7px 7px 0;
                     border-right-color: hsla(0, 0%, 85%, 0.5);
@@ -396,23 +396,23 @@ export default {
                 }
             }
             &[x-placement="right"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     top: 50%;
                     margin-top: -7px;
                 }
             }
             &[x-placement="right-start"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     top: 8px;
                 }
             }
             &[x-placement="right-end"] {
-                & .mx-tooltip-arrow {
+                & .fox-tooltip-arrow {
                     bottom: 8px;
                 }
             }
         }
-        .mx-tooltip-arrow {
+        .fox-tooltip-arrow {
             &::after {
                 display: block;
                 width: 0;
@@ -422,7 +422,7 @@ export default {
                 content: "";
             }
         }
-        .mx-tooltip-inner {
+        .fox-tooltip-inner {
             background-color: #fff;
             color: #515a6e;
         }

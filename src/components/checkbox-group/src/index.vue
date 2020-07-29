@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-checkbox-group">
+    <div class="fox-checkbox-group">
         <slot></slot>
     </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 import Emitter from "@/mixins/emitter.js";
 export default {
-    name: "mxCheckboxGroup",
+    name: "CheckboxGroup",
     mixins: [Emitter],
     model: {
         props: "value",
@@ -36,13 +36,13 @@ export default {
         addValue(val) {
             this.curValue.push(val);
             this.$emit("change", this.curValue);
-            this.dispatch("mxFormItem", "on-form-change", this.curValue);
+            this.dispatch("FormItem", "on-form-change", this.curValue);
         },
         removeValue(val) {
             const index = this.curValue.indexOf(val);
             this.curValue.splice(index, 1);
             this.$emit("change", this.curValue);
-            this.dispatch("mxFormItem", "on-form-change", this.curValue);
+            this.dispatch("FormItem", "on-form-change", this.curValue);
         },
     },
     watch: {
@@ -56,7 +56,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/styles/common/var.scss";
 
-.mx-checkbox-group {
+.fox-checkbox-group {
     background-color: #fff;
 }
 </style>

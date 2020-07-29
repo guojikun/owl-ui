@@ -1,7 +1,7 @@
-import mxCard from "./src/card.vue";
+import Card from "./src/card.vue";
 
-mxCard.install = vue => {
-    vue.component(`fox${mxCard.name}`, mxCard);
+Card.install = vue => {
+    vue.component(`fox${Card.name}`, Card);
 };
 
-export default mxCard;
+export default Card;

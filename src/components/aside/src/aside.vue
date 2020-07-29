@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: "mxAside",
+    name: "Aside",
     props: {
         width: {
             type: String,

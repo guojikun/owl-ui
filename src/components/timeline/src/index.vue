@@ -1,12 +1,12 @@
 <template>
-    <ul class="mx-timeline">
+    <ul class="fox-timeline">
         <slot></slot>
     </ul>
 </template>
 
 <script>
 export default {
-    name: "mxTimeline",
+    name: "Timeline",
     props: {
         reverse: {
             type: Boolean,
@@ -32,13 +32,13 @@ export default {
 </script>
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-timeline {
+.fox-timeline {
     margin: 0;
-    font-size: $mx--font-size-base;
+    font-size: $fox--font-size-base;
     list-style: none;
 
-    & .mx-timeline-item:last-child {
-        & .mx-timeline-item__tail {
+    & .fox-timeline-item:last-child {
+        & .fox-timeline-item__tail {
             display: none;
         }
     }

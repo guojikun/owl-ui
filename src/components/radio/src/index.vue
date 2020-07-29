@@ -1,11 +1,11 @@
 <template>
-    <label class="mx-radio" :class="[]">
-        <span class="mx-radio__input" :class="[{ 'is-checked': isChecked }, { 'is-disabled': isDisabled }]">
-            <span class="mx-radio__inner"></span>
+    <label class="fox-radio" :class="[]">
+        <span class="fox-radio__input" :class="[{ 'is-checked': isChecked }, { 'is-disabled': isDisabled }]">
+            <span class="fox-radio__inner"></span>
             <input :value="label" :name="names" type="radio" tabIndex="-1" hidden @change="handleChange" />
         </span>
 
-        <span class="mx-radio__label">
+        <span class="fox-radio__label">
             <slot></slot>
         </span>
     </label>
@@ -15,13 +15,13 @@
 import Emitter from "@/mixins/emitter.js";
 import { findComponentUpward } from "@/utils/findComponent.js";
 export default {
-    name: "mxRadio",
+    name: "Radio",
     mixins: [Emitter],
     model: {
         props: "value",
         event: "change",
     },
-    componentName: "mxRadio",
+    componentName: "Radio",
     props: {
         value: {
             type: [Number, String, Boolean],
@@ -45,20 +45,20 @@ export default {
             if (this.isDisabled) {
                 return false;
             }
-            const parent = findComponentUpward(this, "mxRadioGroup");
+            const parent = findComponentUpward(this, "RadioGroup");
             if (parent) {
                 parent.updateValue(this.label);
             } else {
                 this.curValue = ev.target.value;
                 this.$emit("change", this.curValue);
-                this.dispatch("mxFormItem", "on-form-change", this.curValue);
+                this.dispatch("FormItem", "on-form-change", this.curValue);
             }
         },
     },
     computed: {
         isChecked() {
             let bool = false;
-            const parent = findComponentUpward(this, "mxRadioGroup");
+            const parent = findComponentUpward(this, "RadioGroup");
             if (parent) {
                 bool = parent.curValue === this.label;
             } else {
@@ -68,8 +68,8 @@ export default {
             return bool;
         },
         names() {
-            const parent = findComponentUpward(this, "mxRadioGroup");
-            const flag = parent && parent.$options.name === "mxRadioGroup";
+            const parent = findComponentUpward(this, "RadioGroup");
+            const flag = parent && parent.$options.name === "RadioGroup";
             if (flag) {
                 return this.name || parent.value;
             } else {
@@ -77,8 +77,8 @@ export default {
             }
         },
         isDisabled() {
-            const parent = findComponentUpward(this, "mxRadioGroup");
-            const flag = parent && parent.$options.name === "mxRadioGroup";
+            const parent = findComponentUpward(this, "RadioGroup");
+            const flag = parent && parent.$options.name === "RadioGroup";
             if (flag) {
                 return parent.disabled;
             } else {
@@ -99,7 +99,7 @@ export default {
 <style lang="scss">
 @import "@/styles/common/var.scss";
 
-.mx-radio {
+.fox-radio {
     color: #606266;
     font-weight: 500;
     line-height: 1;
@@ -121,11 +121,11 @@ export default {
         vertical-align: middle;
     }
     &__inner {
-        border: 1px solid $mx--radio-border-color;
+        border: 1px solid $fox--radio-border-color;
         border-radius: 100%;
         width: 14px;
         height: 14px;
-        background-color: $mx--color-white;
+        background-color: $fox--color-white;
         position: relative;
         cursor: pointer;
         display: inline-block;
@@ -144,34 +144,34 @@ export default {
         }
     }
     &__input.is-checked {
-        & + .mx-radio__label {
-            color: $mx--color-primary;
+        & + .fox-radio__label {
+            color: $fox--color-primary;
         }
-        .mx-radio__inner {
-            border-color: $mx--color-primary;
-            background: $mx--color-primary;
+        .fox-radio__inner {
+            border-color: $fox--color-primary;
+            background: $fox--color-primary;
             &:after {
                 transform: translate(-50%, -50%) scale(1);
             }
         }
     }
     &__input.is-disabled {
-        & + .mx-radio__label {
-            color: $mx--checkbox-text-color-disabled;
+        & + .fox-radio__label {
+            color: $fox--checkbox-text-color-disabled;
             cursor: not-allowed;
         }
-        .mx-radio__inner {
-            background-color: $mx--checkbox-background-color-disabled;
+        .fox-radio__inner {
+            background-color: $fox--checkbox-background-color-disabled;
             border-color: #e4e7ed;
             cursor: not-allowed;
             &:after {
                 cursor: not-allowed;
-                background-color: $mx--checkbox-background-color-disabled;
+                background-color: $fox--checkbox-background-color-disabled;
             }
         }
     }
     &__input.is-checked.is-disabled {
-        .mx-radio__inner {
+        .fox-radio__inner {
             background-color: #f5f7fa;
             border-color: #e4e7ed;
             &:after {

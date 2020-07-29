@@ -1,7 +1,7 @@
-import mxCell from "./src/cell.vue";
+import Cell from "./src/cell.vue";
 
-mxCell.install = vue => {
-    vue.component(mxCell.name, mxCell);
+Cell.install = vue => {
+    vue.component(`fox${Cell.name}`, Cell);
 };
 
-export default mxCell;
+export default Cell;

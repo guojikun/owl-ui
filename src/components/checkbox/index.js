@@ -1,7 +1,7 @@
-import mxCheckbox from "./src/index.vue";
+import Checkbox from "./src/index.vue";
 
-mxCheckbox.install = Vue => {
-    Vue.component(mxCheckbox.name, mxCheckbox);
+Checkbox.install = Vue => {
+    Vue.component(`fox${Checkbox.name}`, Checkbox);
 };
 
-export default mxCheckbox;
+export default Checkbox;

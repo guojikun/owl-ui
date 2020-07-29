@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-radio-group">
+    <div class="fox-radio-group">
         <slot></slot>
     </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 import Emitter from "@/mixins/emitter.js";
 export default {
-    name: "mxRadioGroup",
+    name: "RadioGroup",
     mixins: [Emitter],
     model: {
         props: "value",
@@ -31,7 +31,7 @@ export default {
         updateValue(val) {
             this.curValue = val;
             this.$emit("change", this.curValue);
-            this.dispatch("mxFormItem", "on-form-change", this.curValue);
+            this.dispatch("FormItem", "on-form-change", this.curValue);
         },
     },
     watch: {

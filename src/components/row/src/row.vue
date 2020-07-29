@@ -2,9 +2,9 @@
     <component
         :is="tag"
         :class="[
-            'mx-row',
+            'fox-row',
             {
-                'mx-row--flex': this.flex,
+                'fox-row--flex': this.flex,
             },
             `is-align-${this.align}`,
         ]"
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    name: "mxRow",
+    name: "Row",
     props: {
         tag: {
             type: String,
@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-row {
+.fox-row {
     position: relative;
     box-sizing: border-box;
     &::before,

@@ -1,7 +1,7 @@
-import mxCheckboxGroup from "./src/index.vue";
+import CheckboxGroup from "./src/index.vue";
 
-mxCheckboxGroup.install = Vue => {
-    Vue.component(mxCheckboxGroup.name, mxCheckboxGroup);
+CheckboxGroup.install = Vue => {
+    Vue.component(`fox${CheckboxGroup.name}`, CheckboxGroup);
 };
 
-export default mxCheckboxGroup;
+export default CheckboxGroup;

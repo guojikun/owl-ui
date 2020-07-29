@@ -1,41 +1,41 @@
 <template>
     <div
-        class="mx-progress"
+        class="fox-progress"
         :class="[
             status ? `is-${status}` : '',
             {
-                'mx-progress--circle': type === 'circle',
+                'fox-progress--circle': type === 'circle',
             },
         ]"
     >
-        <div :class="['mx-progress-bar', { 'is-text-nside': textInside }]" v-if="type === 'line'">
-            <div class="mx-progress-bar__outer" :style="getHeight">
-                <div class="mx-progress-bar__inner" :style="[widths]">
-                    <span v-if="textInside && showText" class="mx-progress-bar__inner-text"> {{ percentage }}% </span>
+        <div :class="['fox-progress-bar', { 'is-text-nside': textInside }]" v-if="type === 'line'">
+            <div class="fox-progress-bar__outer" :style="getHeight">
+                <div class="fox-progress-bar__inner" :style="[widths]">
+                    <span v-if="textInside && showText" class="fox-progress-bar__inner-text"> {{ percentage }}% </span>
                 </div>
             </div>
         </div>
-        <div v-else class="mx-progress-circle" :style="circleWidth">
+        <div v-else class="fox-progress-circle" :style="circleWidth">
             <svg viewBox="0 0 100 100">
-                <path :d="getPath" stroke="#e5e9f2" :stroke-width="getCircleWidth" fill="none" class="mx-progress-circle__track"></path>
+                <path :d="getPath" stroke="#e5e9f2" :stroke-width="getCircleWidth" fill="none" class="fox-progress-circle__track"></path>
                 <path
                     :d="getPath"
                     stroke-linecap="round"
                     :stroke="getColor"
                     :stroke-width="getCircleWidth"
                     fill="none"
-                    class="mx-progress-circle__path"
+                    class="fox-progress-circle__path"
                     :style="gets"
                 ></path>
             </svg>
         </div>
-        <div class="mx-progress__text" v-if="!textInside && showText" v-html="text"></div>
+        <div class="fox-progress__text" v-if="!textInside && showText" v-html="text"></div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "mxProgress",
+    name: "Progress",
     props: {
         type: {
             type: String,
@@ -130,9 +130,9 @@ export default {
         },
         text() {
             if (this.status === "success") {
-                return `<i class="mx-icon-md-checkmark" />`;
+                return `<i class="fox-icon-md-checkmark" />`;
             } else if (this.status === "danger") {
-                return `<i class="mx-icon-md-close" />`;
+                return `<i class="fox-icon-md-close" />`;
             } else {
                 return `${this.percentage}%`;
             }
@@ -142,7 +142,7 @@ export default {
 </script>
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-progress {
+.fox-progress {
     overflow: hidden;
     line-height: 1;
     box-sizing: border-box;
@@ -195,61 +195,61 @@ export default {
         box-sizing: border-box;
     }
 }
-.mx-progress.is-success {
-    .mx-progress-bar__inner {
-        background-color: $mx--color-success;
+.fox-progress.is-success {
+    .fox-progress-bar__inner {
+        background-color: $fox--color-success;
     }
-    .mx-progress__text {
-        background-color: $mx--color-success;
+    .fox-progress__text {
+        background-color: $fox--color-success;
         border-radius: 50%;
-        color: $mx--color-white;
-        [class^="mx-icon-"] {
+        color: $fox--color-white;
+        [class^="fox-icon-"] {
             transform: scale(0.8);
         }
     }
 }
-.mx-progress.is-danger {
-    .mx-progress-bar__inner {
-        background-color: $mx--color-danger;
+.fox-progress.is-danger {
+    .fox-progress-bar__inner {
+        background-color: $fox--color-danger;
     }
-    .mx-progress__text {
-        background-color: $mx--color-danger;
+    .fox-progress__text {
+        background-color: $fox--color-danger;
         border-radius: 50%;
-        color: $mx--color-white;
-        [class^="mx-icon-"] {
+        color: $fox--color-white;
+        [class^="fox-icon-"] {
             transform: scale(0.8);
         }
     }
 }
-.mx-progress--circle.is-success {
-    .mx-progress-bar__inner {
-        background-color: $mx--color-success;
+.fox-progress--circle.is-success {
+    .fox-progress-bar__inner {
+        background-color: $fox--color-success;
     }
-    .mx-progress__text {
+    .fox-progress__text {
         background-color: transparent;
         border-radius: 0;
-        color: $mx--color-success;
-        [class^="mx-icon-"] {
+        color: $fox--color-success;
+        [class^="fox-icon-"] {
             transform: scale(1.2);
         }
     }
 }
-.mx-progress--circle.is-danger {
-    .mx-progress-bar__inner {
-        background-color: $mx--color-danger;
+.fox-progress--circle.is-danger {
+    .fox-progress-bar__inner {
+        background-color: $fox--color-danger;
     }
-    .mx-progress__text {
+    .fox-progress__text {
         background-color: transparent;
         border-radius: 0;
-        color: $mx--color-danger;
-        [class^="mx-icon-"] {
+        color: $fox--color-danger;
+        [class^="fox-icon-"] {
             transform: scale(1.2);
         }
     }
 }
-.mx-progress--circle {
+.fox-progress--circle {
     display: inline-block;
-    .mx-progress__text {
+    .fox-progress__text {
         position: absolute;
         top: 50%;
         left: 0;

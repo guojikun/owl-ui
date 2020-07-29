@@ -1,12 +1,12 @@
 <template>
-    <div class="mx-collapse">
+    <div class="fox-collapse">
         <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: "mxCollapse",
+    name: "Collapse",
     model: {
         props: "value",
         event: "change",
@@ -27,7 +27,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.mx-collapse {
+.fox-collapse {
     background-color: #f7f7f7;
     border-radius: 3px;
     border: 1px solid #dcdee2;

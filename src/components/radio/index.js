@@ -1,7 +1,7 @@
-import mxRadio from "./src/index.vue";
+import Radio from "./src/index.vue";
 
-mxRadio.install = Vue => {
-    Vue.component(mxRadio.name, mxRadio);
+Radio.install = Vue => {
+    Vue.component(`fox${Radio.name}`, Radio);
 };
 
-export default mxRadio;
+export default Radio;

@@ -1,7 +1,7 @@
-import mxRow from "./src/row.vue";
+import Row from "./src/row.vue";
 
-mxRow.install = vue => {
-    vue.component(mxRow.name, mxRow);
+Row.install = vue => {
+    vue.component(`fox${Row.name}`, Row);
 };
 
-export default mxRow;
+export default Row;

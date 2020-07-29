@@ -1,7 +1,7 @@
-import mxTooltip from "./src/index.vue";
+import Tooltip from "./src/index.vue";
 
-mxTooltip.install = Vue => {
-    Vue.component(mxTooltip.name, mxTooltip);
+Tooltip.install = Vue => {
+    Vue.component(`fox${Tooltip.name}`, Tooltip);
 };
 
-export default mxTooltip;
+export default Tooltip;

@@ -1,48 +1,48 @@
 <template>
-    <div :class="['mx-cell', { 'is-disabled': disabled }, { 'is-selected': selected }]">
-        <div class="mx-cell__main" @click="handleClick">
-            <router-link v-if="!!to" tag="a" :to="to" :replace="replace" :target="target" class="mx-cell-item">
-                <div class="mx-cell-icon" v-if="icon || $slots.icon">
+    <div :class="['fox-cell', { 'is-disabled': disabled }, { 'is-selected': selected }]">
+        <div class="fox-cell__main" @click="handleClick">
+            <router-link v-if="!!to" tag="a" :to="to" :replace="replace" :target="target" class="fox-cell-item">
+                <div class="fox-cell-icon" v-if="icon || $slots.icon">
                     <slot name="icon"></slot>
                 </div>
-                <div class="mx-cell-text">
-                    <div class="mx-cell-title">
+                <div class="fox-cell-text">
+                    <div class="fox-cell-title">
                         <slot>{{ title }}</slot>
                     </div>
-                    <div class="mx-cell-label" v-if="label || $slots.label">
+                    <div class="fox-cell-label" v-if="label || $slots.label">
                         <slot name="label">{{ label }}</slot>
                     </div>
                 </div>
-                <div class="mx-cell-extra" :style="[extraStyle]">
+                <div class="fox-cell-extra" :style="[extraStyle]">
                     <slot name="extra">{{ extra }}</slot>
                 </div>
             </router-link>
-            <div v-else class="mx-cell-item">
-                <div class="mx-cell-icon" v-if="icon || $slots.icon">
+            <div v-else class="fox-cell-item">
+                <div class="fox-cell-icon" v-if="icon || $slots.icon">
                     <slot name="icon"></slot>
                 </div>
-                <div class="mx-cell-text">
-                    <div class="mx-cell-title">
+                <div class="fox-cell-text">
+                    <div class="fox-cell-title">
                         <slot>{{ title }}</slot>
                     </div>
-                    <div class="mx-cell-label" v-if="label || $slots.label">
+                    <div class="fox-cell-label" v-if="label || $slots.label">
                         <slot name="label">{{ label }}</slot>
                     </div>
                 </div>
-                <div class="mx-cell-extra" :style="[extraStyle]">
+                <div class="fox-cell-extra" :style="[extraStyle]">
                     <slot name="extra">{{ extra }}</slot>
                 </div>
             </div>
         </div>
-        <div class="mx-cell__arrow" v-if="$slots.arrow || to || isLink">
-            <mx-icon name="ios-arrow-forward"></mx-icon>
+        <div class="fox-cell__arrow" v-if="$slots.arrow || to || isLink">
+            <fox-icon name="ios-arrow-forward"></fox-icon>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "mxCell",
+    name: "Cell",
     props: {
         title: String,
         name: [String, Number],
@@ -89,7 +89,7 @@ export default {
 </script>
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-cell {
+.fox-cell {
     position: relative;
     box-sizing: border-box;
     margin: 0;
@@ -171,7 +171,7 @@ export default {
         }
     }
     &.is-selected {
-        color: $mx--color-primary;
+        color: $fox--color-primary;
         background-color: #f0faff;
         :hover {
             background-color: #f0faff;

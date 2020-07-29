@@ -1,7 +1,7 @@
-import MxBreadcrumb from "./src/breadcrumb.vue";
+import Breadcrumb from "./src/breadcrumb.vue";
 
-MxBreadcrumb.install = vue => {
-    vue.component(MxBreadcrumb.name, MxBreadcrumb);
+Breadcrumb.install = vue => {
+    vue.component(`fox${Breadcrumb.name}`, Breadcrumb);
 };
 
-export default MxBreadcrumb;
+export default Breadcrumb;

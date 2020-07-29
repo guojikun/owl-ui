@@ -1,19 +1,19 @@
 <template>
-    <div class="mx-table">
+    <div class="fox-table">
         <table
             :class="[
-                'mx-table--inner',
+                'fox-table--inner',
                 {
-                    'mx-table--border': border,
+                    'fox-table--border': border,
                 },
             ]"
         >
             <colgroup>
                 <col v-for="(th, index) in columns" :key="index" :width="th.minWidth" />
             </colgroup>
-            <tbody class="mx-table__head">
-                <tr class="mx-table-tr">
-                    <td v-for="(th, index) in columns" :key="index" class="mx-table-td mx-table-th">
+            <tbody class="fox-table__head">
+                <tr class="fox-table-tr">
+                    <td v-for="(th, index) in columns" :key="index" class="fox-table-td fox-table-th">
                         <div>{{ th.title }}</div>
                     </td>
                 </tr>
@@ -21,9 +21,9 @@
         </table>
         <table
             :class="[
-                'mx-table--inner',
+                'fox-table--inner',
                 {
-                    'mx-table--border': border,
+                    'fox-table--border': border,
                 },
             ]"
         >
@@ -31,21 +31,21 @@
                 <col v-for="(th, index) in columns" :key="index" :width="th.minWidth" />
             </colgroup>
 
-            <tbody class="mx-table__body">
-                <tr v-for="(item, i) in data" :key="i" class="mx-table-tr">
-                    <td v-for="(th, index) in columns" :key="index" class="mx-table-td">
+            <tbody class="fox-table__body">
+                <tr v-for="(item, i) in data" :key="i" class="fox-table-tr">
+                    <td v-for="(th, index) in columns" :key="index" class="fox-table-td">
                         <div>{{ item[th.key] }}</div>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <table :class="['mx-table--inner', { 'mx-table--border': border }]" v-if="showSummary">
+        <table :class="['fox-table--inner', { 'fox-table--border': border }]" v-if="showSummary">
             <colgroup>
                 <col v-for="(th, index) in columns" :key="index" :width="th.minWidth" />
             </colgroup>
-            <tbody class="mx-table__head">
-                <tr class="mx-table-tr">
-                    <td v-for="(th, index) in columns" :key="index" class="mx-table-td" style="border-bottom: none">
+            <tbody class="fox-table__head">
+                <tr class="fox-table-tr">
+                    <td v-for="(th, index) in columns" :key="index" class="fox-table-td" style="border-bottom: none;">
                         <div>{{ th.title }}</div>
                     </td>
                 </tr>
@@ -59,7 +59,7 @@
 
 <script>
 export default {
-    name: "mxTable",
+    name: "Table",
     provide() {
         return {
             tableRoot: this,
@@ -109,7 +109,7 @@ export default {
 </script>
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-table {
+.fox-table {
     box-sizing: border-box;
     border-spacing: 0;
     font-size: 14px;
@@ -129,7 +129,7 @@ export default {
     &__body {
         box-sizing: inherit;
         width: 100%;
-        & > .mx-table-tr {
+        & > .fox-table-tr {
             &:hover {
                 background-color: #eef7ff;
             }
@@ -143,8 +143,8 @@ export default {
     &-td {
         box-sizing: inherit;
         padding: 10px 0;
-        color: $mx--body-font-color;
-        border-bottom: 1px solid $mx--border-color;
+        color: $fox--body-font-color;
+        border-bottom: 1px solid $fox--border-color;
         border-spacing: 0;
         & > div {
             padding: 0 10px;
@@ -154,8 +154,8 @@ export default {
         border-bottom: none;
     }
     &--border {
-        .mx-table-td {
-            border: 1px solid $mx--border-color;
+        .fox-table-td {
+            border: 1px solid $fox--border-color;
             border-collapse: collapse;
         }
     }

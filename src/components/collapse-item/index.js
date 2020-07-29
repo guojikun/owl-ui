@@ -1,7 +1,7 @@
-import mxCollapseItem from "./src/collapse-item.vue";
+import CollapseItem from "./src/collapse-item.vue";
 
-mxCollapseItem.install = vue => {
-    vue.component(mxCollapseItem.name, mxCollapseItem);
+CollapseItem.install = vue => {
+    vue.component(`fox${CollapseItem.name}`, CollapseItem);
 };
 
-export default mxCollapseItem;
+export default CollapseItem;

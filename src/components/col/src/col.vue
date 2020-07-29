@@ -1,7 +1,7 @@
 <template>
     <component
         :is="tag"
-        :class="['mx-col', this.span ? `mx-col-${this.span}` : '', this.offset ? `mx-col-offset-${this.offset}` : '']"
+        :class="['fox-col', this.span ? `fox-col-${this.span}` : '', this.offset ? `fox-col-offset-${this.offset}` : '']"
         :style="this.padding"
     >
         <slot></slot>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    name: "mxCol",
+    name: "Col",
     props: {
         tag: {
             type: String,
@@ -39,19 +39,19 @@ export default {
 
 <style lang="scss">
 @import "@/styles/common/var.scss";
-[class*="mx-col-"] {
+[class*="fox-col-"] {
     float: left;
     box-sizing: border-box;
 }
 
 @for $i from 1 to 25 {
-    .mx-col-#{$i} {
+    .fox-col-#{$i} {
         width: #{$i / 24 * 100%};
     }
 }
 
 @for $i from 1 to 25 {
-    .mx-col-offset-#{$i} {
+    .fox-col-offset-#{$i} {
         margin-left: #{$i / 24 * 100%};
     }
 }

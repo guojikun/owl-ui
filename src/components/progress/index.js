@@ -1,7 +1,7 @@
-import mxProgress from "./src/index.vue";
+import Progress from "./src/index.vue";
 
-mxProgress.install = Vue => {
-    Vue.component(mxProgress.name, mxProgress);
+Progress.install = Vue => {
+    Vue.component(`fox${Progress.name}`, Progress);
 };
 
-export default mxProgress;
+export default Progress;

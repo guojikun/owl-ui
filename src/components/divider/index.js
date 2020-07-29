@@ -1,7 +1,7 @@
-import mxDivider from "./src/divider.vue";
+import Divider from "./src/divider.vue";
 
-mxDivider.install = Vue => {
-    Vue.component(mxDivider.name, mxDivider);
+Divider.install = Vue => {
+    Vue.component(`fox${Divider.name}`, Divider);
 };
 
-export default mxDivider;
+export default Divider;

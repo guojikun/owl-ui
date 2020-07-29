@@ -1,8 +1,8 @@
 <template>
-    <div class="mx-rate">
-        <div class="mx-rate__icon">
-            <mx-icon
-                :class="['mx-rate__icon-item']"
+    <div class="fox-rate">
+        <div class="fox-rate__icon">
+            <fox-icon
+                :class="['fox-rate__icon-item']"
                 :name="cur < item ? icon : activeIcon"
                 v-for="item in count"
                 :key="item"
@@ -12,9 +12,9 @@
                 @click="handleClick(item)"
             >
                 <i v-if="allowHalf" :style="['color', activeIconColor]"></i>
-            </mx-icon>
+            </fox-icon>
         </div>
-        <span class="mx-rate__text">
+        <span class="fox-rate__text">
             <slot>{{ value }}</slot>
         </span>
         <input type="text" hidden :value="value" />
@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import mxIcon from "../../icon/index.js";
+import Icon from "../../icon/index.js";
 import Emitter from "@/mixins/emitter.js";
 export default {
-    name: "mxRate",
-    components: { mxIcon },
+    name: "Rate",
+    components: { Icon },
     mixins: [Emitter],
     model: {
         props: "value",
@@ -86,7 +86,7 @@ export default {
             if (this.tigger === "hover") {
                 this.cur = val;
                 this.$emit("change", this.cur);
-                this.dispatch("mxFormItem", "on-form-change", this.cur);
+                this.dispatch("FormItem", "on-form-change", this.cur);
             }
         },
         handleMouseleave() {},
@@ -97,7 +97,7 @@ export default {
             if (this.tigger === "click") {
                 this.cur = val;
                 this.$emit("change", this.cur);
-                this.dispatch("mxFormItem", "on-form-change", this.cur);
+                this.dispatch("FormItem", "on-form-change", this.cur);
             }
         },
         getIconColor(item) {
@@ -120,7 +120,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.mx-rate {
+.fox-rate {
     display: flex;
     &__icon {
         &-item {

@@ -1,7 +1,7 @@
-import mxSteps from "./src/index.vue";
+import Steps from "./src/index.vue";
 
-mxSteps.install = Vue => {
-    Vue.component(mxSteps.name, mxSteps);
+Steps.install = Vue => {
+    Vue.component(`fox${Steps.name}`, Steps);
 };
 
-export default mxSteps;
+export default Steps;

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: "mxHeader",
+    name: "Header",
     props: {
         height: {
             type: String,

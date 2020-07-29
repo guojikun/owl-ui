@@ -1,14 +1,14 @@
 <template>
-    <label class="mx-checkbox">
+    <label class="fox-checkbox">
         <span
-            class="mx-checkbox__input"
+            class="fox-checkbox__input"
             :class="[{ 'is-checked': isChecked }, { 'is-disabled': disabled }, { 'is-indeterminate': indeterminate }]"
         >
-            <span class="mx-checkbox__inner"></span>
+            <span class="fox-checkbox__inner"></span>
             <input :value="label" type="checkbox" tabIndex="-1" hidden @change="handleChange" />
         </span>
 
-        <span class="mx-checkbox__label" :class="{ 'is-disabled': disabled }">
+        <span class="fox-checkbox__label" :class="{ 'is-disabled': disabled }">
             <slot></slot>
         </span>
     </label>
@@ -19,7 +19,7 @@ import Emitter from "@/mixins/emitter.js";
 import { findComponentUpward } from "@/utils/findComponent.js";
 
 export default {
-    name: "mxCheckbox",
+    name: "Checkbox",
     mixins: [Emitter],
     model: {
         props: "value",
@@ -54,7 +54,7 @@ export default {
             if (this.disabled) {
                 return false;
             }
-            const parent = findComponentUpward(this, "mxCheckboxGroup");
+            const parent = findComponentUpward(this, "CheckboxGroup");
             if (parent) {
                 const checked = !this.isChecked;
                 if (checked) {
@@ -66,7 +66,7 @@ export default {
                 this.curValue = !this.isChecked;
                 const value = this.getCheckedValue(this.curValue);
                 this.$emit("change", value);
-                this.dispatch("mxFormItem", "on-form-change", value);
+                this.dispatch("FormItem", "on-form-change", value);
             }
         },
         getCheckedValue(val) {
@@ -79,7 +79,7 @@ export default {
     computed: {
         isChecked() {
             let bool = false;
-            const parent = findComponentUpward(this, "mxCheckboxGroup");
+            const parent = findComponentUpward(this, "CheckboxGroup");
             if (parent) {
                 bool = parent.curValue.includes(this.label);
             } else {
@@ -95,7 +95,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/styles/common/var.scss";
 
-.mx-checkbox {
+.fox-checkbox {
     color: #606266;
     font-weight: 500;
     line-height: 1;
@@ -116,8 +116,8 @@ export default {
         position: relative;
         vertical-align: middle;
         &.is-indeterminate {
-            .mx-checkbox__inner {
-                background-color: $mx--color-primary;
+            .fox-checkbox__inner {
+                background-color: $fox--color-primary;
                 &::before {
                     content: "";
                     position: absolute;
@@ -135,7 +135,7 @@ export default {
     &__inner {
         display: inline-block;
         position: relative;
-        border: 1px solid $mx--checkbox-border-color;
+        border: 1px solid $fox--checkbox-border-color;
         border-radius: 2px;
         box-sizing: border-box;
         width: 14px;
@@ -144,7 +144,7 @@ export default {
         z-index: 1;
         transition: border-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46), background-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46);
         &:hover {
-            border-color: $mx--color-primary;
+            border-color: $fox--color-primary;
         }
         &:after {
             box-sizing: content-box;
@@ -163,26 +163,26 @@ export default {
         }
     }
     &__input.is-checked {
-        border-color: $mx--color-primary;
-        & + .mx-checkbox__label {
-            color: $mx--color-primary;
+        border-color: $fox--color-primary;
+        & + .fox-checkbox__label {
+            color: $fox--color-primary;
         }
-        .mx-checkbox__inner {
-            background: $mx--color-primary;
-            border-color: $mx--color-primary;
+        .fox-checkbox__inner {
+            background: $fox--color-primary;
+            border-color: $fox--color-primary;
             &:after {
                 transform: rotate(45deg) scaleY(1);
             }
         }
     }
     &__input.is-disabled {
-        & + .mx-checkbox__label {
-            color: $mx--checkbox-border-color;
+        & + .fox-checkbox__label {
+            color: $fox--checkbox-border-color;
             cursor: not-allowed;
         }
-        .mx-checkbox__inner {
+        .fox-checkbox__inner {
             background-color: #edf2fc;
-            border-color: $mx--checkbox-border-color;
+            border-color: $fox--checkbox-border-color;
             cursor: not-allowed;
             &:after {
                 cursor: not-allowed;
@@ -191,11 +191,11 @@ export default {
         }
     }
     &__input.is-checked.is-disabled {
-        .mx-checkbox__inner {
+        .fox-checkbox__inner {
             background-color: #f2f6fc;
             border-color: #dcdfe6;
             &:after {
-                border-color: $mx--checkbox-border-color;
+                border-color: $fox--checkbox-border-color;
             }
         }
     }

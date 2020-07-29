@@ -1,15 +1,15 @@
 <template>
-    <span class="mx-breadcrumb-item">
-        <component :is="isCom" :to="to" :replace="replace" :append="append" :target="target" class="mx-breadcrumb-item-text">
+    <span class="fox-breadcrumb-item">
+        <component :is="isCom" :to="to" :replace="replace" :append="append" :target="target" class="fox-breadcrumb-item-text">
             <slot></slot>
         </component>
-        <span class="mx-breadcrumb-item-symbol">{{ separator }}</span>
+        <span class="fox-breadcrumb-item-symbol">{{ separator }}</span>
     </span>
 </template>
 
 <script>
 export default {
-    name: "MxBreadcrumbItem",
+    name: "BreadcrumbItem",
     inject: ["separator"],
     props: {
         to: {
@@ -48,10 +48,10 @@ export default {
 </script>
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-breadcrumb-item {
+.fox-breadcrumb-item {
     & > a {
         &:hover {
-            color: $mx--color-primary;
+            color: $fox--color-primary;
         }
     }
     &-text {
@@ -65,7 +65,7 @@ export default {
     &:last-child {
         font-weight: 700;
         color: #515a6e;
-        .mx-breadcrumb-item-symbol {
+        .fox-breadcrumb-item-symbol {
             display: none;
         }
     }

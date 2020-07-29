@@ -1,20 +1,20 @@
 <template>
-    <div class="mx-step">
-        <div class="mx-step__line">
-            <div :class="['mx-step__line-status', isFinish ? `mx-step__line-status-${getCurrStatus}` : '']"></div>
+    <div class="fox-step">
+        <div class="fox-step__line">
+            <div :class="['fox-step__line-status', isFinish ? `fox-step__line-status-${getCurrStatus}` : '']"></div>
         </div>
-        <div class="mx-step__icon">
-            <div :class="['mx-step__icon-inner', `mx-step__icon-inner-${getCurrStatus}`]">
-                <mx-icon name="ios-checkmark" size="16" v-if="getCurrStatus === 'finish'"></mx-icon>
-                <mx-icon name="ios-close" size="16" v-else-if="getCurrStatus === 'error'"></mx-icon>
+        <div class="fox-step__icon">
+            <div :class="['fox-step__icon-inner', `fox-step__icon-inner-${getCurrStatus}`]">
+                <fox-icon name="ios-checkmark" size="16" v-if="getCurrStatus === 'finish'"></fox-icon>
+                <fox-icon name="ios-close" size="16" v-else-if="getCurrStatus === 'error'"></fox-icon>
                 <span v-else>{{ index }}</span>
             </div>
         </div>
-        <div class="mx-step__main">
-            <div :class="['mx-step__main-title', `mx-step__main-title-${getCurrStatus}`]">
+        <div class="fox-step__main">
+            <div :class="['fox-step__main-title', `fox-step__main-title-${getCurrStatus}`]">
                 <slot>{{ title }}</slot>
             </div>
-            <div class="mx-step__main-desc">
+            <div class="fox-step__main-desc">
                 <slot>{{ description }}</slot>
             </div>
         </div>
@@ -24,7 +24,7 @@
 <script>
 import { findComponentUpward } from "@/utils/findComponent.js";
 export default {
-    name: "mxStep",
+    name: "Step",
     props: {
         title: String,
         status: {
@@ -49,7 +49,7 @@ export default {
     },
     computed: {
         getCurrIndex() {
-            const parent = findComponentUpward(this, "mxSteps");
+            const parent = findComponentUpward(this, "Steps");
             let active = 0;
             if (parent) {
                 active = parent.active;
@@ -57,7 +57,7 @@ export default {
             return active;
         },
         getCurrStatus() {
-            const parent = findComponentUpward(this, "mxSteps");
+            const parent = findComponentUpward(this, "Steps");
             let state = "wait";
             if (this.getCurrIndex > this.index) {
                 state = parent.finishStatus;
@@ -77,7 +77,7 @@ export default {
 </script>
 <style lang="scss">
 @import "@/styles/common/var.scss";
-.mx-step {
+.fox-step {
     display: inline-block;
     position: relative;
     vertical-align: top;
@@ -85,7 +85,7 @@ export default {
     overflow: hidden;
     &:last-child {
         flex: none;
-        .mx-step__line {
+        .fox-step__line {
             display: none;
         }
     }
@@ -124,21 +124,21 @@ export default {
             font-size: 14px;
             transition: background-color 0.2s ease-in-out;
             &-process {
-                border-color: $mx--color-primary;
-                background-color: $mx--color-primary;
-                color: $mx--color-white;
+                border-color: $fox--color-primary;
+                background-color: $fox--color-primary;
+                color: $fox--color-white;
             }
             &-finish {
-                border-color: $mx--color-primary;
-                color: $mx--color-primary;
+                border-color: $fox--color-primary;
+                color: $fox--color-primary;
             }
             &-success {
-                border-color: $mx--color-success;
-                color: $mx--color-success;
+                border-color: $fox--color-success;
+                color: $fox--color-success;
             }
             &-error {
-                border-color: $mx--color-danger;
-                color: $mx--color-danger;
+                border-color: $fox--color-danger;
+                color: $fox--color-danger;
             }
         }
     }
@@ -156,16 +156,16 @@ export default {
             color: #999;
             background-color: #fff;
             &-process {
-                color: $mx--color-text-regular;
+                color: $fox--color-text-regular;
             }
             &-finish {
-                color: $mx--color-primary;
+                color: $fox--color-primary;
             }
             &-success {
-                color: $mx--color-success;
+                color: $fox--color-success;
             }
             &-error {
-                color: $mx--color-danger;
+                color: $fox--color-danger;
             }
         }
         &-desc {
@@ -175,8 +175,8 @@ export default {
         }
     }
 }
-.mx-steps-horizontal {
-    .mx-step__line {
+.fox-steps-horizontal {
+    .fox-step__line {
         box-sizing: border-box;
         display: inline-block;
         width: 100%;
@@ -216,7 +216,7 @@ export default {
                     width: 100%;
                     transition: all 0.2s ease-in-out;
                     opacity: 1;
-                    background-color: $mx--color-primary;
+                    background-color: $fox--color-primary;
                 }
             }
             &-success {
@@ -224,7 +224,7 @@ export default {
                     width: 100%;
                     transition: all 0.2s ease-in-out;
                     opacity: 1;
-                    background-color: $mx--color-success;
+                    background-color: $fox--color-success;
                 }
             }
             &-error {
@@ -232,14 +232,14 @@ export default {
                     width: 100%;
                     transition: all 0.2s ease-in-out;
                     opacity: 1;
-                    background-color: $mx--color-danger;
+                    background-color: $fox--color-danger;
                 }
             }
         }
     }
 }
-.mx-steps-vertical {
-    .mx-step {
+.fox-steps-vertical {
+    .fox-step {
         display: block;
         overflow: visible;
         &__line {
@@ -275,7 +275,7 @@ export default {
                         width: 100%;
                         transition: all 0.2s ease-in-out;
                         opacity: 1;
-                        background-color: $mx--color-primary;
+                        background-color: $fox--color-primary;
                     }
                 }
                 &-success {
@@ -283,7 +283,7 @@ export default {
                         width: 100%;
                         transition: all 0.2s ease-in-out;
                         opacity: 1;
-                        background-color: $mx--color-success;
+                        background-color: $fox--color-success;
                     }
                 }
                 &-error {
@@ -291,7 +291,7 @@ export default {
                         width: 100%;
                         transition: all 0.2s ease-in-out;
                         opacity: 1;
-                        background-color: $mx--color-danger;
+                        background-color: $fox--color-danger;
                     }
                 }
             }

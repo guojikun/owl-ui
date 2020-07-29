@@ -1,9 +1,9 @@
 <template>
     <div
-        class="mx-divider"
-        :class="[`mx-divider-${type}`, $slots.default ? `mx-divider-text-${placement}` : 'mx-divider-default', { 'is-dashed': dashed }]"
+        class="fox-divider"
+        :class="[`fox-divider-${type}`, $slots.default ? `fox-divider-text-${placement}` : 'fox-divider-default', { 'is-dashed': dashed }]"
     >
-        <span class="mx-divier-inner__text" :style="textStyle" v-if="type === 'horizontal' && $slots.default">
+        <span class="fox-divier-inner__text" :style="textStyle" v-if="type === 'horizontal' && $slots.default">
             <slot></slot>
         </span>
     </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    name: "mxDivider",
+    name: "Divider",
     props: {
         placement: {
             type: String,
@@ -38,11 +38,11 @@ export default {
 <style lang="scss">
 @import "@/styles/common/var.scss";
 
-.mx-divider {
+.fox-divider {
     display: inline-block;
-    font-size: $mx--divider-font-size-base;
+    font-size: $fox--divider-font-size-base;
     line-height: 1.5;
-    color: $mx--timeline-font-color-base;
+    color: $fox--timeline-font-color-base;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -54,7 +54,7 @@ export default {
         min-width: 100%;
         margin: 24px 0;
         clear: both;
-        .mx-divier-inner__text {
+        .fox-divier-inner__text {
             display: inline-block;
             margin: 0 20px;
         }
@@ -64,7 +64,7 @@ export default {
         margin: 0 10px;
         width: 1px;
         height: 1em !important;
-        background-color: $mx--timeline-background-color-base;
+        background-color: $fox--timeline-background-color-base;
         vertical-align: middle;
     }
     &-text-center,
@@ -85,15 +85,15 @@ export default {
             width: 50%;
             transform: translateY(50%);
             top: 50%;
-            border-top: 1px $mx--timeline-border-style-base $mx--timeline-border-color-base;
+            border-top: 1px $fox--timeline-border-style-base $fox--timeline-border-color-base;
         }
-        .mx-divier-inner__text {
+        .fox-divier-inner__text {
             display: inline-block;
             padding: 0px;
         }
     }
     &-default {
-        background-color: $mx--timeline-background-color-base;
+        background-color: $fox--timeline-background-color-base;
     }
     &-text-left {
         &:before {
@@ -111,10 +111,10 @@ export default {
             width: 5%;
         }
     }
-    .mx-divier-inner__text {
+    .fox-divier-inner__text {
         box-sizing: border-box;
         display: inline-block;
-        background-color: $mx--color-white;
+        background-color: $fox--color-white;
         font-size: 14px;
     }
 }
@@ -130,7 +130,7 @@ export default {
         width: 50%;
         transform: translateY(50%);
         top: 50%;
-        border-top: 1px dashed $mx--timeline-border-color-base;
+        border-top: 1px dashed $fox--timeline-border-color-base;
     }
 }
 </style>
