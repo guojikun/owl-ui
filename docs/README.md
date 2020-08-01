@@ -1,19 +1,29 @@
-# fox-design
+# owl-ui
 
-## 使用
-
-### 安装
-
-```bash
-yarn install fox-design
+## Project setup
+```
+yarn install
 ```
 
-### 引用
-
-```bash
-import Vue from 'vue'
-import foxDesign from 'fox-design';
-import 'fox-design/lib/fox-design.css';
-
-Vue.use(foxDesign)
+### Compiles and hot-reloads for development
 ```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Run your unit tests
+```
+yarn test:unit
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

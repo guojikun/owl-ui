@@ -11,6 +11,11 @@
         "components",
         "fox-design",
         "foxDesign",
+        "fox",
+        "foxUI",
+        "foxUi",
+        "foxui",
+        "fox-ui",
         "ui",
         "view"
     ],
@@ -22,9 +27,10 @@
         "README.md"
     ],
     "scripts": {
+        "serve:docs": "vuepress dev ./docs",
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --modern --dest docs",
-        "build:lib": "vue-cli-service build --dest lib --target lib --name fox-design ./src/index.js",
+        "build:lib": "vue-cli-service build --dest lib --target lib --name fox-design ./src/main.js",
         "test:unit": "vue-cli-service test:unit",
         "lint": "vue-cli-service lint"
     },
