@@ -7,7 +7,9 @@ set -e
 # npm run build:docs
 
 # 进入生成的文件夹
-cd docs/.vuepress/dist
+cd ./docs/.vuepress/dist
+
+pwd
 
 # 如果是发布到自定义域名
 echo 'fox.iceri.cn' > CNAME
