@@ -28,7 +28,7 @@
     ],
     "scripts": {
         "serve:docs": "vuepress dev ./docs",
-        "build:docs": "vuepress build ./docs",
+        "build:docs": "npx vuepress build ./docs",
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --modern --dest docs",
         "build:lib": "vue-cli-service build --dest lib --target lib --name fox-design ./src/main.js",
