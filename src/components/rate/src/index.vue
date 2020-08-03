@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import Icon from "../../icon/index.js";
+import FoxIcon from "@/components/icon/index.js";
 import Emitter from "@/mixins/emitter.js";
 export default {
     name: "Rate",
-    components: { Icon },
+    components: { FoxIcon },
     mixins: [Emitter],
     model: {
         props: "value",

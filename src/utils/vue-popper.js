@@ -83,7 +83,10 @@ export default {
 
             if (!popper || !reference) return;
 
-            if (this.popperJS && this.popperJS.hasOwnProperty("destroy")) {
+            /* if (this.popperJS && this.popperJS.hasOwnProperty("destroy")) {
+                this.popperJS.destroy();
+            } */
+            if (this.popperJS) {
                 this.popperJS.destroy();
             }
 
