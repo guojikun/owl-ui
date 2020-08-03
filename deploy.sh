@@ -4,13 +4,13 @@
 set -e
 
 # 生成静态文件
-npm run build:docs
+# npm run build:docs
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
- echo 'fox.iceri.cn' > CNAME
+echo 'fox.iceri.cn' > CNAME
 
 git init
 git add -A
