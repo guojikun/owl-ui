@@ -4581,17 +4581,6 @@ forwarded@~0.1.2:
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
 
-fox-design@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.npmjs.org/fox-design/-/fox-design-0.1.3.tgz#39c529801816b06d5a6b45d26c408fc2689f605c"
-  integrity sha512-dykciEIfWw1Kgji9KFC6pT9kK5MQvgxuIoW0n2MrGjBrRE+61qsG1x6gxnZCrSKJS5q3LNlv4l0olaaToKjPzg==
-  dependencies:
-    core-js "^3.6.5"
-    popper.js "^1.16.1"
-    vue "^2.6.11"
-    vue-router "^3.2.0"
-    vuex "^3.4.0"
-
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"

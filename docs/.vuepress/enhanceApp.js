@@ -1,5 +1,5 @@
-import foxDesign from "fox-design";
-import "fox-design/lib/fox-design.css";
+import foxDesign from "../../lib/fox-design.umd.js";
+import "../../lib/fox-design.css";
 console.log(foxDesign);
 // 使用异步函数也是可以的
 export default ({
