@@ -20,6 +20,10 @@ jobs:
             # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
             - uses: actions/checkout@v2
 
+            - name: 设置git账号，邮箱
+              run: git config --global user.email "guojikun486546@163.com"
+                  git config --global user.name "guojikun"
+
             # Runs a single command using the runners shell
             - name: 开始构建
               run: bash deploy.sh
