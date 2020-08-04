@@ -11,6 +11,7 @@ module.exports = [
                 collapsable: false, // 可选的, 默认值是 true,
                 sidebarDepth: 1, // 可选的, 默认值是 1
                 children: [
+                    ["/transition", "Transition 动画"],
                     ["/icon", "Icon 图标"],
                     ["/button", "Button 按钮"],
                 ],

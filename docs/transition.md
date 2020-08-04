@@ -19,7 +19,24 @@ mxui 内应用在部分组件的过渡动画，你也可以直接使用。
         </div>
     </transition>
 </div>
-                
+
+```html
+<fox-button @click="show = !show">click me</fox-button>
+
+<div class="transition-parent">
+    <transition name="fox-fade-in-linear">
+        <div v-show="show" class="transition-box">
+            .fox-fade-in-linear
+        </div>
+    </transition>
+    <transition name="fox-fade-in">
+        <div v-show="show" class="transition-box">
+            .fox-fade-in
+        </div>
+    </transition>
+</div>
+```
+
 ## zoom 缩放
 
 <fox-button @click="show2 = !show2">Click Me</fox-button>
@@ -30,13 +47,11 @@ mxui 内应用在部分组件的过渡动画，你也可以直接使用。
             .fox-zoom-in-center
         </div>
     </transition>
-
     <transition name="fox-zoom-in-top">
         <div v-show="show2" class="transition-box">
             .fox-zoom-in-top
         </div>
     </transition>
-
     <transition name="fox-zoom-in-bottom">
         <div v-show="show2" class="transition-box">
             .fox-zoom-in-bottom
@@ -44,8 +59,31 @@ mxui 内应用在部分组件的过渡动画，你也可以直接使用。
     </transition>
 
 </div>
+
+```html
+<fox-button @click="show2 = !show2">Click Me</fox-button>
+
+<div class="transition-parent">
+    <transition name="fox-zoom-in-center">
+        <div v-show="show2" class="transition-box">
+            .fox-zoom-in-center
+        </div>
+    </transition>
+    <transition name="fox-zoom-in-top">
+        <div v-show="show2" class="transition-box">
+            .fox-zoom-in-top
+        </div>
+    </transition>
+    <transition name="fox-zoom-in-bottom">
+        <div v-show="show2" class="transition-box">
+            .fox-zoom-in-bottom
+        </div>
+    </transition>
+</div>
+```
+
 ## collapse 展开折叠
-                    
+
 使用 fox-collapse-transition 组件实现折叠展开效果。
 
 <fox-button @click="show3 = !show3">Click Me</fox-button>
@@ -63,52 +101,9 @@ mxui 内应用在部分组件的过渡动画，你也可以直接使用。
     </fox-collapse-transition>
 </div>
 
-<script>
-export default {
-    data() {
-        return {
-            show: true,
-            show2: true,
-            show3: true,
-            code1: `
-<fox-button @click="show = !show">click me</fox-button>
-<div style="display: flex; margin-top: 20px; height: 100px;">
-    <transition name="fox-fade-in-linear">
-        <div v-show="show" class="transition-box">
-            .fox-fade-in-linear
-        </div>
-    </transition>
-    <transition name="fox-fade-in">
-        <div v-show="show" class="transition-box">
-            .fox-fade-in
-        </div>
-    </transition>
-</div>
-            `,
-            code2: `
-<fox-button @click="show2 = !show2">Click Me</fox-button>
-<div style="display: flex; margin-top: 20px; height: 100px;">
-    <transition name="fox-zoom-in-center">
-        <div v-show="show2" class="transition-box">
-            .fox-zoom-in-center
-        </div>
-    </transition>
-
-    <transition name="fox-zoom-in-top">
-        <div v-show="show2" class="transition-box">
-            .fox-zoom-in-top
-        </div>
-    </transition>
-
-    <transition name="fox-zoom-in-bottom">
-        <div v-show="show2" class="transition-box">
-            .fox-zoom-in-bottom
-        </div>
-    </transition>
-</div>
-            `,
-            code3: `
+```html
 <fox-button @click="show3 = !show3">Click Me</fox-button>
+
 <div style="margin-top: 20px; height: 200px;">
     <fox-collapse-transition>
         <div v-show="show3">
@@ -121,7 +116,15 @@ export default {
         </div>
     </fox-collapse-transition>
 </div>
-            `,
+```
+
+<script>
+export default {
+    data() {
+        return {
+            show: true,
+            show2: true,
+            show3: true,
         };
     },
     methods: {

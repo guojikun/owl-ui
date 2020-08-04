@@ -84,9 +84,9 @@ const install = Vue => {
     if (install.installed) return;
     install.installed = true;
     // 遍历注册所有组件
-    // components.map(component => Vue.component(component.name, component));
+    components.map(component => Vue.component(`fox${component.name}`, component));
     // 下面这个写法也可以
-    components.map(component => Vue.use(component));
+    // components.map(component => Vue.use(component));
 };
 
 // 通过script标签引入时执行
