@@ -11,8 +11,9 @@ module.exports = {
     },
     plugins,
     extraWatchFiles: [
-        ".vuepress/conf/sidebar.js", // 使用相对路径
-        ".vuepress/conf/navbar.js", // 使用绝对路径
-        ".vuepress/conf/plugins.js", // 使用绝对路径
+        "./conf/sidebar.js", // 使用相对路径
+        "./conf/navbar.js", // 使用绝对路径
+        "./conf/plugins.js", // 使用绝对路径
+        "./enhanceApp.js", // 使用绝对路径
     ],
 };

@@ -1,4 +1,4 @@
-import icon from "@/style/iconfont/iconfont.svg";
+import "@/style/iconfont/iconfont.js";
 
 export default {
     name: "Icon",
@@ -8,8 +8,13 @@ export default {
             type: String,
             required: true,
         },
+        size: {
+            type: String,
+            default: "16px",
+        },
     },
     render: (h, { props }) => {
+        console.log(props.style);
         return h(
             "svg",
             {
@@ -20,6 +25,7 @@ export default {
                     verticalAlign: "-0.15em",
                     fill: "currentColor",
                     overflow: "hidden",
+                    fontSize: props.size,
                 },
                 attrs: {
                     viewBox: "0 0 1024 1024",
@@ -31,7 +37,7 @@ export default {
             [
                 h("use", {
                     attrs: {
-                        "xlink:href": `${icon}#fox-icon-${props.name}`,
+                        "xlink:href": `#fox-icon-${props.name}`,
                     },
                 }),
             ]

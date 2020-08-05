@@ -1,52 +1,56 @@
 <template>
     <div id="app">
-        <div id="sidebar">
-            <div id="nav">
-                <router-link to="/changelog">更新日志</router-link>
-                <router-link to="/">使用引导</router-link>
-                <router-link to="/icon">Icon 图标</router-link>
-                <router-link to="/button">Button 按钮</router-link>
-            </div>
+        测试界面
+        <div>
+            <fox-icon name="load" spin></fox-icon>
         </div>
-        <div id="main">
-            <div class="header"></div>
-            <div class="main">
-                <router-view />
+        <div>
+            <div class="mt-20">
+                <fox-button :loading="loading">默认按钮</fox-button>
+                <fox-button type="primary" :loading="loading">主要按钮</fox-button>
+                <fox-button type="success" :loading="loading">success</fox-button>
+                <fox-button type="warning" :loading="loading">warning</fox-button>
+                <fox-button type="danger" :loading="loading">danger</fox-button>
+                <fox-button type="info" :loading="loading">info</fox-button>
+            </div>
+            <div class="mt-20">
+                <fox-button plain :loading="loading">朴素按钮</fox-button>
+                <fox-button type="primary" plain :loading="loading">主要按钮</fox-button>
+                <fox-button type="success" plain :loading="loading">success</fox-button>
+                <fox-button type="warning" plain :loading="loading">warning</fox-button>
+                <fox-button type="danger" plain :loading="loading">danger</fox-button>
+                <fox-button type="info" plain :loading="loading">info</fox-button>
+            </div>
+            <div class="mt-20">
+                <fox-button round :loading="loading">圆角按钮</fox-button>
+                <fox-button type="primary" round :loading="loading">主要按钮</fox-button>
+                <fox-button type="success" round :loading="loading">success</fox-button>
+                <fox-button type="warning" round :loading="loading">warning</fox-button>
+                <fox-button type="danger" round :loading="loading">danger</fox-button>
+                <fox-button type="info" round :loading="loading">info</fox-button>
             </div>
         </div>
     </div>
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            loading: true,
+        };
+    },
+};
+</script>
+
 <style lang="scss">
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-p,
-pre,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 600;
-    line-height: 2em;
+.mt-20 {
+    margin-top: 20px;
 }
 #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    display: flex;
     height: 100vh;
     box-sizing: border-box;
     font-size: 14px;

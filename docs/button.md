@@ -132,3 +132,23 @@
 <fox-button size="small" round>small</fox-button>
 <fox-button size="mini" round>mini</fox-button>
 ```
+
+## loading 状态
+
+使用 _`loading`_ 图标表示加载中的状态
+
+<fox-button :loading="loading">加载中</fox-button>
+
+```html
+<fox-button :loading="loading">加载中</fox-button>
+```
+
+<script>
+export default {
+    data(){
+        return {
+            loading: true
+        }
+    }
+}
+</script>

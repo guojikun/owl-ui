@@ -2,16 +2,26 @@
     <button
         class="fox-button"
         :disabled="disabled"
-        :class="['fox-button--' + type, 'fox-button--' + size, { 'is-disabled': disabled }, { 'is-plain': plain }, { 'is-round': round }]"
+        :class="[
+            'fox-button--' + type,
+            'fox-button--' + size,
+            { 'is-disabled': disabled },
+            { 'is-plain': plain },
+            { 'is-round': round },
+            { 'is-loading': loading },
+        ]"
         @click="handleClick"
     >
+        <fox-icon name="load" spin v-show="loading" size="14px" class="fox-button-loading"></fox-icon>
         <slot></slot>
     </button>
 </template>
 
 <script>
+import FoxIcon from "@/components/icon";
 export default {
     name: "Button",
+    components: { FoxIcon },
     props: {
         type: {
             type: String,
@@ -37,6 +47,10 @@ export default {
         },
         round: {
             type: Boolean,
+        },
+        loading: {
+            type: Boolean,
+            default: false,
         },
     },
     methods: {
@@ -66,6 +80,9 @@ export default {
     border: 1px solid $fox-border-color-default;
     background: #fff;
     color: #606266;
+    &-loading {
+        margin-right: 4px;
+    }
     &:hover,
     &:focus {
         color: $fox--color-primary;
@@ -114,7 +131,18 @@ export default {
             border-color: $fox--color-primary;
             background-color: $fox--color-white;
         }
+        &.is-loading,
+        &.is-disabled,
+        &.is-disabled:active,
+        &.is-disabled:focus,
+        &.is-disabled:hover {
+            color: $fox-disabled;
+            cursor: not-allowed;
+            background-color: $fox--color-white;
+            border-color: $fox-border-color-disabled;
+        }
     }
+    &.is-loading,
     &.is-disabled,
     &.is-disabled:active,
     &.is-disabled:focus,
@@ -144,6 +172,7 @@ export default {
                 border-color: $fox--color-primary;
                 background-color: $fox--color-primary;
             }
+            &.is-loading,
             &.is-disabled,
             &.is-disabled:active,
             &.is-disabled:focus,
@@ -153,6 +182,7 @@ export default {
                 border-color: $fox--color-primary-light-8;
             }
         }
+        &.is-loading,
         &.is-disabled,
         &.is-disabled:active,
         &.is-disabled:focus,
@@ -182,6 +212,7 @@ export default {
                 border-color: $fox--color-success;
                 background-color: $fox--color-success;
             }
+            &.is-loading,
             &.is-disabled,
             &.is-disabled:active,
             &.is-disabled:focus,
@@ -191,6 +222,7 @@ export default {
                 border-color: $fox--color-success-light-8;
             }
         }
+        &.is-loading,
         &.is-disabled,
         &.is-disabled:active,
         &.is-disabled:focus,
@@ -220,6 +252,7 @@ export default {
                 border-color: $fox--color-danger;
                 background-color: $fox--color-danger;
             }
+            &.is-loading,
             &.is-disabled,
             &.is-disabled:active,
             &.is-disabled:focus,
@@ -229,6 +262,7 @@ export default {
                 border-color: $fox--color-danger-light-8;
             }
         }
+        &.is-loading,
         &.is-disabled,
         &.is-disabled:active,
         &.is-disabled:focus,
@@ -258,6 +292,7 @@ export default {
                 border-color: $fox--color-warning;
                 background-color: $fox--color-warning;
             }
+            &.is-loading,
             &.is-disabled,
             &.is-disabled:active,
             &.is-disabled:focus,
@@ -267,6 +302,7 @@ export default {
                 border-color: $fox--color-warning-light-8;
             }
         }
+        &.is-loading,
         &.is-disabled,
         &.is-disabled:active,
         &.is-disabled:focus,
@@ -296,6 +332,7 @@ export default {
                 border-color: $fox--color-info;
                 background-color: $fox--color-info;
             }
+            &.is-loading,
             &.is-disabled,
             &.is-disabled:active,
             &.is-disabled:focus,
@@ -305,6 +342,7 @@ export default {
                 border-color: $fox--color-info-light-8;
             }
         }
+        &.is-loading,
         &.is-disabled,
         &.is-disabled:active,
         &.is-disabled:focus,
@@ -324,6 +362,7 @@ export default {
             border-color: $fox--color-transparent;
             background-color: $fox--color-transparent;
         }
+        &.is-loading,
         &.is-disabled,
         &.is-disabled:focus,
         &.is-disabled:hover,

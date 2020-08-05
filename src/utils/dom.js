@@ -1,11 +1,11 @@
-import Vue from 'vue';
+import Vue from "vue";
 
 const isServer = Vue.prototype.$isServer;
 
 export { isServer };
 /* istanbul ignore next */
 const trim = string => {
-    return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
+    return (string || "").replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, "");
 };
 /* 添加事件绑定 */
 export const on = (() => {
@@ -18,7 +18,7 @@ export const on = (() => {
     } else {
         return (element, event, handler) => {
             if (element && event && handler) {
-                element.attachEvent('on' + event, handler);
+                element.attachEvent("on" + event, handler);
             }
         };
     }
@@ -35,7 +35,7 @@ export const off = (() => {
     } else {
         return (element, event, handler) => {
             if (element && event) {
-                element.detachEvent('on' + event, handler);
+                element.detachEvent("on" + event, handler);
             }
         };
     }
@@ -54,12 +54,11 @@ export const once = (el, event, fn) => {
 
 export function hasClass(el, cls) {
     if (!el || !cls) return false;
-    if (cls.indexOf(' ') !== -1)
-        throw new Error('className should not contain space.');
+    if (cls.indexOf(" ") !== -1) throw new Error("className should not contain space.");
     if (el.classList) {
         return el.classList.contains(cls);
     } else {
-        return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+        return (" " + el.className + " ").indexOf(" " + cls + " ") > -1;
     }
 }
 /**
@@ -70,7 +69,7 @@ export function hasClass(el, cls) {
 export function addClass(el, cls) {
     if (!el) return;
     var curClass = el.className;
-    var classes = (cls || '').split(' ');
+    var classes = (cls || "").split(" ");
 
     for (var i = 0, j = classes.length; i < j; i++) {
         var clsName = classes[i];
@@ -79,7 +78,7 @@ export function addClass(el, cls) {
         if (el.classList) {
             el.classList.add(clsName);
         } else if (!hasClass(el, clsName)) {
-            curClass += ' ' + clsName;
+            curClass += " " + clsName;
         }
     }
     if (!el.classList) {
@@ -94,8 +93,8 @@ export function addClass(el, cls) {
  */
 export function removeClass(el, cls) {
     if (!el || !cls) return;
-    var classes = cls.split(' ');
-    var curClass = ' ' + el.className + ' ';
+    var classes = cls.split(" ");
+    var curClass = " " + el.className + " ";
 
     for (var i = 0, j = classes.length; i < j; i++) {
         var clsName = classes[i];
@@ -104,7 +103,7 @@ export function removeClass(el, cls) {
         if (el.classList) {
             el.classList.remove(clsName);
         } else if (hasClass(el, clsName)) {
-            curClass = curClass.replace(' ' + clsName + ' ', ' ');
+            curClass = curClass.replace(" " + clsName + " ", " ");
         }
     }
     if (!el.classList) {

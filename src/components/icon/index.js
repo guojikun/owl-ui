@@ -1,4 +1,4 @@
-import Icon from "./src/icon.js";
+import Icon from "./src/icon.vue";
 
 Icon.install = Vue => {
     Vue.component(`fox${Icon.name}`, Icon);

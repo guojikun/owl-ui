@@ -70,11 +70,7 @@ export const findComponentsDownward = (content, componentName) => {
 /*
  *找到指定组件的兄弟组件
  */
-export const findBrothersComponents = (
-    content,
-    componentName,
-    exceptMe = true
-) => {
+export const findBrothersComponents = (content, componentName, exceptMe = true) => {
     let res = content.$parent.$children;
     res = res.filter(item => {
         return item.$options.name === componentName;
