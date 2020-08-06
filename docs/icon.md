@@ -6,13 +6,13 @@
 
 直接通过设置类名为 fox-icon-iconName 来使用即可。
 
-<fox-icon name="load"></fox-icon>
-<fox-icon name="angry"></fox-icon>
+<fox-icon name="arrow-repeat"></fox-icon>
+<fox-icon name="broadcast-pin"></fox-icon>
 <fox-icon name="cloud"></fox-icon>
 
 ```html
-<fox-icon name="load"></fox-icon>
-<fox-icon name="angry"></fox-icon>
+<fox-icon name="arrow-repeat"></fox-icon>
+<fox-icon name="broadcast-pin"></fox-icon>
 <fox-icon name="cloud"></fox-icon>
 ```
 
@@ -20,13 +20,13 @@
 
 通过 _`size`_ 属性来设置图标的大小
 
-<fox-icon name="load" size="16px"></fox-icon>
-<fox-icon name="angry" size="24px"></fox-icon>
+<fox-icon name="arrow-repeat" size="16px"></fox-icon>
+<fox-icon name="broadcast-pin" size="24px"></fox-icon>
 <fox-icon name="cloud" size="30px"></fox-icon>
 
 ```html
-<fox-icon name="load" size="16px"></fox-icon>
-<fox-icon name="angry" size="24px"></fox-icon>
+<fox-icon name="arrow-repeat" size="16px"></fox-icon>
+<fox-icon name="broadcast-pin" size="24px"></fox-icon>
 <fox-icon name="cloud" size="30px"></fox-icon>
 ```
 
@@ -34,13 +34,13 @@
 
 通过 _`color`_ 属性来设置图标的大小
 
-<fox-icon name="load" color="pink"></fox-icon>
-<fox-icon name="angry" color="blue"></fox-icon>
+<fox-icon name="arrow-repeat" color="pink"></fox-icon>
+<fox-icon name="broadcast-pin" color="blue"></fox-icon>
 <fox-icon name="cloud" color="purple"></fox-icon>
 
 ```html
-<fox-icon name="load" color="pink"></fox-icon>
-<fox-icon name="angry" color="blue"></fox-icon>
+<fox-icon name="arrow-repeat" color="pink"></fox-icon>
+<fox-icon name="broadcast-pin" color="blue"></fox-icon>
 <fox-icon name="cloud" color="purple"></fox-icon>
 ```
 

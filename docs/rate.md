@@ -4,17 +4,33 @@
 
 <fox-rate v-model="value"></fox-rate>
 
+```html
+<fox-rate v-model="value"></fox-rate>
+```
+
 ## click 选择
 
 <fox-rate v-model="value1" tigger="click"></fox-rate>
+
+```html
+<fox-rate v-model="value1" tigger="click"></fox-rate>
+```
 
 ## 自定义 icon</h1>
 
 <fox-rate v-model="value1" tigger="click" icon="ios-heart-empty" active-icon="ios-heart"> </fox-rate>
 
+```html
+<fox-rate v-model="value1" tigger="click" icon="ios-heart-empty" active-icon="ios-heart"> </fox-rate>
+```
+
 ## 只读
 
 <fox-rate v-model="value2" disabled></fox-rate>
+
+```html
+<fox-rate v-model="value2" disabled></fox-rate>
+```
 
 <script>
 export default {

@@ -5,6 +5,7 @@ mxui 内应用在部分组件的过渡动画，你也可以直接使用。
 
 ## fade 淡入淡出
 
+<div class="mt-20"></div>
 <fox-button @click="show = !show">click me</fox-button>
 
 <div class="transition-parent">
@@ -39,6 +40,7 @@ mxui 内应用在部分组件的过渡动画，你也可以直接使用。
 
 ## zoom 缩放
 
+<div class="mt-20"></div>
 <fox-button @click="show2 = !show2">Click Me</fox-button>
 
 <div class="transition-parent">
@@ -86,6 +88,7 @@ mxui 内应用在部分组件的过渡动画，你也可以直接使用。
 
 使用 fox-collapse-transition 组件实现折叠展开效果。
 
+<div class="mt-20"></div>
 <fox-button @click="show3 = !show3">Click Me</fox-button>
 
 <div style="margin-top: 20px; height: 200px;">
@@ -150,10 +153,6 @@ export default {
 }
 .page-modal-item {
     padding: 20px;
-}
-h1 {
-    font-weight: 500;
-    font-size: 1.7em;
 }
 .page-modal-item-content {
     padding: 20px;
