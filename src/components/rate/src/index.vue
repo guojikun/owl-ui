@@ -14,7 +14,7 @@
                 <i v-if="allowHalf" :style="['color', activeIconColor]"></i>
             </fox-icon>
         </div>
-        <span class="fox-rate__text">
+        <span class="fox-rate__text" v-show="showInfo">
             <slot>{{ value }}</slot>
         </span>
         <input type="text" hidden :value="value" />
@@ -43,7 +43,7 @@ export default {
         },
         icon: {
             type: String,
-            default: "ios-star-outline",
+            default: "star",
         },
         iconColor: {
             type: String,
@@ -51,7 +51,7 @@ export default {
         },
         activeIcon: {
             type: String,
-            default: "ios-star",
+            default: "star-fill",
         },
         activeIconColor: {
             type: String,
@@ -71,6 +71,10 @@ export default {
             validator(value) {
                 return ["hover", "click"].includes(value);
             },
+        },
+        showInfo: {
+            type: Boolean,
+            default: true,
         },
     },
     data() {

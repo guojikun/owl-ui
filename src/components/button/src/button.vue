@@ -12,7 +12,7 @@
         ]"
         @click="handleClick"
     >
-        <fox-icon name="load" spin v-show="loading" size="14px" class="fox-button-loading"></fox-icon>
+        <fox-icon name="arrow-repeat" spin v-show="loading" size="14px" class="fox-button-loading"></fox-icon>
         <slot></slot>
     </button>
 </template>

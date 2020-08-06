@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style>
-@import url("../../../style/iconfont/iconfont.css");
+@import url("../../../style/icon/icon.css");
 .fox-icon {
     display: inline-block;
 }

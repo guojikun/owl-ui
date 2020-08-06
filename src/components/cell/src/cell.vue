@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="fox-cell__arrow" v-if="$slots.arrow || to || isLink">
-            <fox-icon name="ios-arrow-forward"></fox-icon>
+            <fox-icon name="chevron-right"></fox-icon>
         </div>
     </div>
 </template>

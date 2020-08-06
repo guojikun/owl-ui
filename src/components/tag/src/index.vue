@@ -2,7 +2,7 @@
     <transition :name="transfer">
         <span class="fox-tag" :class="['fox-tag--' + theme, `fox-tag--${theme}-${type}`, `fox-tag--${size}`]" @click="clicks">
             <slot></slot>
-            <fox-icon class="fox-tag-close" name="ios-close" v-if="closable" @click="closed"> </fox-icon>
+            <fox-icon class="fox-tag-close" name="x" v-if="closed" @click="close"> </fox-icon>
         </span>
     </transition>
 </template>
@@ -28,10 +28,7 @@ export default {
                 return flag;
             },
         },
-        closable: {
-            type: Boolean,
-            default: false,
-        },
+        closed: Boolean,
         disableTransitions: {
             type: Boolean,
             default: false,
@@ -45,7 +42,7 @@ export default {
         },
     },
     methods: {
-        closed(event) {
+        close(event) {
             event.stopPropagation();
             this.$emit("close", event);
         },
@@ -171,7 +168,7 @@ export default {
         border-radius: 50%;
         font-size: 14px;
         position: relative;
-        top: 0.5px;
+        top: 1.5px;
         cursor: pointer;
         &:hover {
             background-color: $fox--color-info;
@@ -193,7 +190,7 @@ export default {
     }
     &--large &-close {
         font-size: 16px;
-        top: 1px;
+        top: 2px;
         &:hover {
             background-color: $fox--color-info;
             color: $fox--color-white;
@@ -202,7 +199,7 @@ export default {
     &--small &-close,
     &--mini &-close {
         font-size: 12px;
-        top: 0px;
+        top: 0.5px;
         &:hover {
             background-color: $fox--color-info;
             color: $fox--color-white;

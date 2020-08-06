@@ -1,7 +1,7 @@
 <template>
     <div class="fox-collapse-item" :class="[{ 'fox-collapse-item-active': isActive }]">
         <div class="fox-collapse-item__header" @click="handleChange">
-            <fox-icon name="ios-arrow-forward" :class="['fox-icon-right', `fox-collapse-arrow-${getArrow}`]"> </fox-icon>
+            <fox-icon name="chevron-right" :class="['fox-icon-right', `fox-collapse-arrow-${getArrow}`]"> </fox-icon>
             <span>
                 <slot name="title">{{ title }}</slot>
             </span>

@@ -1,7 +1,13 @@
+@import "icon/icon.scss";
 .fox-icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
+    display: inline-block;
+}
+.is-spin {
+    transition: 0.3s;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }

@@ -1,6 +1,6 @@
 {
     "name": "fox-design",
-    "version": "0.1.4",
+    "version": "0.2.2",
     "private": false,
     "description": "vue通用组件库；fox-design；foxDesign",
     "main": "lib/fox-design.umd.js",

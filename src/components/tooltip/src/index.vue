@@ -270,6 +270,7 @@ export default {
         border-style: solid;
     }
     &-inner {
+        box-sizing: border-box;
         max-width: 250px;
         min-height: 34px;
         padding: 8px 12px;
