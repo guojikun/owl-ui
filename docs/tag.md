@@ -27,7 +27,7 @@
         v-for="tag in tags"
         :key="tag.type"
         :type="tag.type"
-        closable
+        closed
         @close="handleClose(tag.name)"
     >
         {{ tag.name }}
