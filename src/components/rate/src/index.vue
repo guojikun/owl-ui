@@ -9,7 +9,7 @@
                 :style="getIconColor(item)"
                 @mouseenter.native="handleMouseenter($event, item)"
                 @mouseleave.native="handleMouseleave(item)"
-                @click="handleClick(item)"
+                @click.native="handleClick(item)"
             >
                 <i v-if="allowHalf" :style="['color', activeIconColor]"></i>
             </fox-icon>

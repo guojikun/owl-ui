@@ -34,7 +34,7 @@
         </div>
         <div>
             <p class="title">Rate</p>
-            <fox-rate v-model="rate"></fox-rate>
+            <fox-rate v-model="rate" tigger="click"></fox-rate>
         </div>
         <div>
             <p class="title">collapse 折叠面板</p>
