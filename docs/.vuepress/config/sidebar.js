@@ -34,9 +34,13 @@ module.exports = [
                 collapsable: false, // 可选的, 默认值是 true,
                 sidebarDepth: 1, // 可选的, 默认值是 1
                 children: [
+                    ["/input", "Input 输入框"],
+                    ["/inputnumber", "InputNumber 输入框"],
                     ["/radio", "Radio 单选框"],
                     ["/checkbox", "Checkbox 复选框"],
                     ["/rate", "Rate 评分"],
+                    ["/switch", "Switch 开关"],
+                    ["/form", "Form 表单"],
                 ],
             },
             {
