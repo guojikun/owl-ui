@@ -21,10 +21,15 @@ import Tag from "./components/tag/index.js";
 import Progress from "./components/progress/index.js";
 import Alert from "./components/alert/index.js";
 // form组件
+import Form from "./components/form/index.js";
+import FormItem from "./components/form-item/index.js";
+import Input from "./components/input/index.js";
+import InputNumber from "./components/input-number/index.js";
 import Radio from "./components/radio/index.js";
 import RadioGroup from "./components/radio-group/index.js";
 import Checkbox from "./components/checkbox/index.js";
 import CheckboxGroup from "./components/checkbox-group/index.js";
+import Switch from "./components/switch/index.js";
 import Rate from "./components/rate/index.js";
 // nav组件
 import Breadcrumb from "./components/breadcrumb/index.js";
@@ -58,10 +63,15 @@ let components = [
     CollapseItem,
     CollapseTransition,
 
+    Form,
+    FormItem,
+    Input,
+    InputNumber,
     Radio,
     RadioGroup,
     Checkbox,
     CheckboxGroup,
+    Switch,
     Rate,
 
     Table,

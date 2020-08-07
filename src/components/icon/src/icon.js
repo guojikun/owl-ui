@@ -4,10 +4,7 @@ export default {
     name: "Icon",
     functional: true,
     props: {
-        name: {
-            type: String,
-            required: true,
-        },
+        name: String,
         size: {
             type: String,
             default: "16px",

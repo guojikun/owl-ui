@@ -6,10 +6,7 @@
 export default {
     name: "Icon",
     props: {
-        name: {
-            type: String,
-            required: true,
-        },
+        name: String,
         size: [Number, String],
         color: String,
         spin: Boolean,
