@@ -2,3 +2,5 @@
 export const oneOf = (value, validList) => {
     return validList.includes(value);
 };
+// ui库前缀
+export const prefix = "Fox";
