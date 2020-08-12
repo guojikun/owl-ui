@@ -38,7 +38,7 @@
         />
         <span class="fox-input__suffix" v-if="clearable || suffixIcon">
             <slot name="suffix" v-if="type === 'text' && suffixIcon">
-                <fox-icon :class="suffixIcon" class="fox-input__icon"></fox-icon>
+                <fox-icon :name="suffixIcon" class="fox-input__icon"></fox-icon>
             </slot>
             <fox-icon name="x" class="fox-input-close" v-if="isClose" @click.native="clear"></fox-icon>
         </span>

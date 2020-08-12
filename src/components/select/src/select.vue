@@ -1,6 +1,6 @@
 <template>
-    <div class="fox-select" v-clickoutside="handClose">
-        <fox-input @click.native="handClick" v-model="label"></fox-input>
+    <div :class="['fox-select', { 'is-focus': rotate }]" v-clickoutside="handClose">
+        <fox-input @click.native="handClick" v-model="label" suffix-icon="chevron-down" :disabled="disabled"></fox-input>
         <transition name="fox-zoom-in-top">
             <div v-show="visiable" class="fox-transfer">
                 <ul ref="scrollbar" class="fox-select__scroll">
@@ -28,11 +28,13 @@ export default {
     props: {
         emptyText: String,
         value: [String, Number],
+        disabled: Boolean,
     },
     data() {
         return {
             visiable: false,
             label: null,
+            rotate: false,
         };
     },
     provide() {
@@ -42,12 +44,17 @@ export default {
         handClose() {
             console.log("123");
             this.visiable = false;
+            this.rotate = false;
         },
         handleMenuEnter() {
             this.$nextTick(() => this.scrollToOption(this.selected));
         },
         handClick() {
+            if (this.disabled) {
+                return;
+            }
             this.visiable = true;
+            this.rotate = true;
         },
         handChange(val, label) {
             this.label = label;
@@ -60,12 +67,20 @@ export default {
 .fox-select {
     display: inline-block;
     position: relative;
+    transition: transform 0.3s;
     &__scroll {
         list-style: none;
         margin: 0;
         padding: 0;
     }
+
+    &.is-focus {
+        .fox-icon-chevron-down {
+            transform: rotate(-180deg);
+        }
+    }
 }
+
 .fox-transfer {
     position: absolute;
     left: 0;

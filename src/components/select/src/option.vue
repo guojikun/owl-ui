@@ -35,10 +35,16 @@ export default {
     methods: {
         handClick() {
             const parent = findComponentUpward(this, "FoxSelect");
-            console.log(parent);
             parent.visiable = false;
             parent.handChange(this.currentValue, this.currentLabel);
         },
+    },
+    mounted() {
+        const parent = findComponentUpward(this, "FoxSelect");
+        const value = parent.value;
+        if (this.currentValue === value) {
+            parent.handChange(this.currentValue, this.currentLabel);
+        }
     },
 };
 </script>
@@ -48,7 +54,7 @@ export default {
     line-height: 30px;
     height: 30px;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 15px;
     cursor: pointer;
     &:hover {
         background-color: #f3f3f3;

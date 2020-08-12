@@ -168,7 +168,7 @@ export default {
                 sex: [{ required: true, message: "性别为必选项", tiggers: "change" }],
                 like: [{ required: true, type: "array", message: "爱好为必选项", tiggers: "change" }],
             },
-            selectValue: "",
+            selectValue: "雪糕",
         };
     },
     methods: {
