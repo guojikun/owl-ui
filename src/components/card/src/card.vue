@@ -10,8 +10,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Card",
+    name: `${prefix}Card`,
     props: {
         shadow: {
             type: String,

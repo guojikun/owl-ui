@@ -1,4 +1,4 @@
-import Option from "./src/option.vue";
+import Option from "@/components/select/src/option.vue";
 
 Option.install = Vue => {
     Vue.component(Option.name, Option);

@@ -24,12 +24,13 @@
     </div>
 </template>
 <script>
+import { prefix } from "@/utils/assist.js";
 import { oneOf } from "@/utils/assist.js";
 import Popper from "@/utils/vue-popper.js";
 import { transferIndex, transferIncrease } from "@/utils/transfer-queue";
 const prefixCls = "fox-tooltip";
 export default {
-    name: "Tooltip",
+    name: `${prefix}Tooltip`,
     mixins: [Popper],
     props: {
         placement: {

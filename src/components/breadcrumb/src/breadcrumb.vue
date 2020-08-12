@@ -5,8 +5,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Breadcrumb",
+    name: `${prefix}Breadcrumb`,
     props: {
         separator: {
             type: String,

@@ -5,9 +5,10 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import Emitter from "@/mixins/emitter.js";
 export default {
-    name: "CheckboxGroup",
+    name: `${prefix}CheckboxGroup`,
     mixins: [Emitter],
     model: {
         props: "value",

@@ -5,8 +5,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Aside",
+    name: `${prefix}Aside`,
     props: {
         width: {
             type: String,

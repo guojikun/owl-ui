@@ -17,11 +17,12 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import { findBrothersComponents } from "@/utils/findComponent.js";
 import CollapseTransition from "@/utils/collapse-transition.js";
 import FoxIcon from "@/components/icon/index.js";
 export default {
-    name: "CollapseItem",
+    name: `${prefix}CollapseItem`,
     components: { FoxIcon, CollapseTransition },
     props: {
         value: [String, Array],
@@ -39,7 +40,7 @@ export default {
     methods: {
         init() {
             const parent = this.$parent;
-            const flag = parent.$options.name !== "Collapse";
+            const flag = parent.$options.name !== "FoxCollapse";
             if (flag) {
                 throw new Error("fox-collapse-item组件的父组件必须是fox-collapse");
             }

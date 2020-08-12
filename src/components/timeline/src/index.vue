@@ -5,8 +5,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Timeline",
+    name: `${prefix}Timeline`,
     props: {
         reverse: {
             type: Boolean,

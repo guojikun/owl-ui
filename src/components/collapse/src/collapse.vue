@@ -5,8 +5,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Collapse",
+    name: `${prefix}Collapse`,
     model: {
         props: "value",
         event: "change",

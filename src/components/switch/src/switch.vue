@@ -8,9 +8,10 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import Emitter from "@/mixins/emitter.js";
 export default {
-    name: "Switch",
+    name: `${prefix}Switch`,
     mixins: [Emitter],
     model: {
         props: "value",

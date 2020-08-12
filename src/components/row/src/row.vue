@@ -14,8 +14,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Row",
+    name: `${prefix}Row`,
     props: {
         tag: {
             type: String,

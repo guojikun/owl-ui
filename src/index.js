@@ -29,6 +29,8 @@ import Radio from "./components/radio/index.js";
 import RadioGroup from "./components/radio-group/index.js";
 import Checkbox from "./components/checkbox/index.js";
 import CheckboxGroup from "./components/checkbox-group/index.js";
+import Select from "./components/select/index.js";
+import Option from "./components/option/index.js";
 import Switch from "./components/switch/index.js";
 import Rate from "./components/rate/index.js";
 // nav组件
@@ -71,6 +73,8 @@ let components = [
     RadioGroup,
     Checkbox,
     CheckboxGroup,
+    Select,
+    Option,
     Switch,
     Rate,
 
@@ -94,7 +98,7 @@ const install = Vue => {
     if (install.installed) return;
     install.installed = true;
     // 遍历注册所有组件
-    components.map(component => Vue.component(`fox${component.name}`, component));
+    components.map(component => Vue.component(component.name, component));
     // 下面这个写法也可以
     // components.map(component => Vue.use(component));
 };

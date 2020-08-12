@@ -5,8 +5,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Header",
+    name: `${prefix}Header`,
     props: {
         height: {
             type: String,

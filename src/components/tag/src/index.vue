@@ -8,9 +8,10 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import FoxIcon from "@/components/icon/index.js";
 export default {
-    name: "Tag",
+    name: `${prefix}Tag`,
     components: { FoxIcon },
     props: {
         type: {

@@ -1,7 +1,7 @@
 import Layout from "./src/layout.vue";
 
 Layout.install = Vue => {
-    Vue.component(`fox${Layout.name}`, Layout);
+    Vue.component(Layout.name, Layout);
 };
 
 export default Layout;

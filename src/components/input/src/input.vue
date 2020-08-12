@@ -46,11 +46,12 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import FoxIcon from "@/components/icon";
 import Emitter from "@/mixins/emitter.js";
 
 export default {
-    name: "Input",
+    name: `${prefix}Input`,
     components: { FoxIcon },
     mixins: [Emitter],
     model: {

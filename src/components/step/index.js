@@ -1,7 +1,7 @@
 import Step from "./src/index.vue";
 
 Step.install = Vue => {
-    Vue.component(`fox${Step.name}`, Step);
+    Vue.component(Step.name, Step);
 };
 
 export default Step;

@@ -3,8 +3,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Icon",
+    name: `${prefix}Icon`,
     props: {
         name: String,
         size: [Number, String],

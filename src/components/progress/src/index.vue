@@ -34,8 +34,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Progress",
+    name: `${prefix}Progress`,
     props: {
         type: {
             type: String,

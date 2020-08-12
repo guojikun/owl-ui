@@ -5,9 +5,10 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import { findComponentsDownward } from "@/utils/findComponent.js";
 export default {
-    name: "Steps",
+    name: `${prefix}Steps`,
     props: {
         active: {
             type: Number,

@@ -5,9 +5,10 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import Emitter from "@/mixins/emitter.js";
 export default {
-    name: "RadioGroup",
+    name: `${prefix}RadioGroup`,
     mixins: [Emitter],
     model: {
         props: "value",

@@ -1,7 +1,7 @@
 import Rate from "./src/index.vue";
 
 Rate.install = Vue => {
-    Vue.component(`fox${Rate.name}`, Rate);
+    Vue.component(Rate.name, Rate);
 };
 
 export default Rate;

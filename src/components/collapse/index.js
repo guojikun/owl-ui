@@ -1,7 +1,7 @@
 import Collapse from "./src/collapse.vue";
 
 Collapse.install = vue => {
-    vue.component(`fox${Collapse.name}`, Collapse);
+    vue.component(Collapse.name, Collapse);
 };
 
 export default Collapse;

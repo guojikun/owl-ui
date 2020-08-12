@@ -15,11 +15,12 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import Emitter from "@/mixins/emitter.js";
 import { findComponentUpward } from "@/utils/findComponent.js";
 
 export default {
-    name: "Checkbox",
+    name: `${prefix}Checkbox`,
     mixins: [Emitter],
     model: {
         props: "value",

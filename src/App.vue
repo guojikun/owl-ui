@@ -103,6 +103,16 @@
                 </div>
             </div>
             <div>
+                <p class="title">Select 下拉框</p>
+                <div class="mt-10">
+                    <fox-select v-model="selectValue">
+                        <fox-option value="1" label="蛋糕"></fox-option>
+                        <fox-option value="年糕"></fox-option>
+                        <fox-option label="雪糕"></fox-option>
+                    </fox-select>
+                </div>
+            </div>
+            <div>
                 <p class="title">Switch 开关</p>
                 <div class="mt-10">
                     <fox-form :model="formData" :rules="rules" ref="form1" label-position="right">
@@ -158,6 +168,7 @@ export default {
                 sex: [{ required: true, message: "性别为必选项", tiggers: "change" }],
                 like: [{ required: true, type: "array", message: "爱好为必选项", tiggers: "change" }],
             },
+            selectValue: "",
         };
     },
     methods: {

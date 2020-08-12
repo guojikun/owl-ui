@@ -41,8 +41,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Cell",
+    name: `${prefix}Cell`,
     props: {
         title: String,
         name: [String, Number],

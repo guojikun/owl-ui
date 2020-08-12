@@ -5,8 +5,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Alert",
+    name: `${prefix}Alert`,
     props: {
         type: {
             type: String,

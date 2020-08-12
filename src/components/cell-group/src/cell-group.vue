@@ -5,8 +5,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "CellGroup",
+    name: `${prefix}CellGroup`,
     props: {
         border: {
             type: Boolean,

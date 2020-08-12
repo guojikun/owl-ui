@@ -26,11 +26,12 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import FoxIcon from "@/components/icon";
 import FoxInput from "../../input/src/input.vue";
 import Emitter from "@/mixins/emitter.js";
 export default {
-    name: "InputNumber",
+    name: `${prefix}InputNumber`,
     components: { FoxIcon, FoxInput },
     mixins: [Emitter],
     model: {

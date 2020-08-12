@@ -1,7 +1,7 @@
 import Main from "./src/main.vue";
 
 Main.install = Vue => {
-    Vue.component(`fox${Main.name}`, Main);
+    Vue.component(Main.name, Main);
 };
 
 export default Main;

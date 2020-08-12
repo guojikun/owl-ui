@@ -5,8 +5,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Form",
+    name: `${prefix}Form`,
     props: {
         labelWidth: [String, Number],
         model: Object,

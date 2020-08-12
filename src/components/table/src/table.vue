@@ -58,8 +58,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Table",
+    name: `${prefix}Table`,
     provide() {
         return {
             tableRoot: this,

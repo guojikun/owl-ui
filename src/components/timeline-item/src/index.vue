@@ -33,8 +33,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "TimelineItem",
+    name: `${prefix}TimelineItem`,
     inject: ["timeline"],
     props: {
         timestamp: String,

@@ -1,7 +1,7 @@
 import "@/style/iconfont/iconfont.js";
 
 export default {
-    name: "Icon",
+    name: `${prefix}Icon`,
     functional: true,
     props: {
         name: String,

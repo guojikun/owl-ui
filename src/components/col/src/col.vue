@@ -9,8 +9,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Col",
+    name: `${prefix}Col`,
     props: {
         tag: {
             type: String,

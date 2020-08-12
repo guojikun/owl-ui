@@ -15,10 +15,11 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import Emitter from "@/mixins/emitter.js";
 import AsyncValidator from "async-validator";
 export default {
-    name: "FormItem",
+    name: `${prefix}FormItem`,
     mixins: [Emitter],
     inject: ["form"],
     props: {

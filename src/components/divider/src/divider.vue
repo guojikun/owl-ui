@@ -10,8 +10,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Divider",
+    name: `${prefix}Divider`,
     props: {
         placement: {
             type: String,

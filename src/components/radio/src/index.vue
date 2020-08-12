@@ -12,16 +12,17 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import Emitter from "@/mixins/emitter.js";
 import { findComponentUpward } from "@/utils/findComponent.js";
 export default {
-    name: "Radio",
+    name: `${prefix}Radio`,
     mixins: [Emitter],
     model: {
         props: "value",
         event: "change",
     },
-    componentName: "Radio",
+    componentName: `${prefix}Radio`,
     props: {
         value: {
             type: [Number, String, Boolean],

@@ -22,9 +22,10 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 import { findComponentUpward } from "@/utils/findComponent.js";
 export default {
-    name: "Step",
+    name: `${prefix}Step`,
     props: {
         title: String,
         status: {

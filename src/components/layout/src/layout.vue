@@ -5,8 +5,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "Layout",
+    name: `${prefix}Layout`,
     props: {
         direction: {
             type: String,

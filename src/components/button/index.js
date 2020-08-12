@@ -1,7 +1,7 @@
 import Button from "./src/button.vue";
 
 Button.install = Vue => {
-    Vue.component(`fox${Button.name}`, Button);
+    Vue.component(Button.name, Button);
 };
 
 export default Button;

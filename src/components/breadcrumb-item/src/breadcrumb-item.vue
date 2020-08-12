@@ -8,8 +8,9 @@
 </template>
 
 <script>
+import { prefix } from "@/utils/assist.js";
 export default {
-    name: "BreadcrumbItem",
+    name: `${prefix}BreadcrumbItem`,
     inject: ["separator"],
     props: {
         to: {
