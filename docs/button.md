@@ -143,6 +143,17 @@
 <fox-button :loading="loading">加载中</fox-button>
 ```
 
+## Select Props
+
+| 属性     | 说明           | 类型    | 可选值                                             | 默认值 |
+| -------- | -------------- | ------- | -------------------------------------------------- | ------ |
+| type     | 类型           | string  | primary / success / warning / danger / info / text | -      |
+| size     | 尺寸           | string  | large / small / mini                               | -      |
+| plain    | 是否朴素按钮   | boolean | -                                                  | false  |
+| round    | 是否圆角按钮   | boolean | -                                                  | false  |
+| loading  | 是否加载中状态 | boolean | -                                                  | false  |
+| disabled | 是否禁用       | boolean | -                                                  | false  |
+
 <script>
 export default {
     data(){

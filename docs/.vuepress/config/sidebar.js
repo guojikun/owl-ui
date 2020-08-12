@@ -36,10 +36,12 @@ module.exports = [
                 children: [
                     ["/input", "Input 输入框"],
                     ["/inputnumber", "InputNumber 输入框"],
+                    ["/select", "Select 选择器"],
                     ["/radio", "Radio 单选框"],
                     ["/checkbox", "Checkbox 复选框"],
                     ["/rate", "Rate 评分"],
                     ["/switch", "Switch 开关"],
+                    ["/datepicker", "DatePicker 日期选择器"],
                     ["/form", "Form 表单"],
                 ],
             },

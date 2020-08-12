@@ -1,6 +1,12 @@
 <template>
     <div :class="['fox-select', { 'is-focus': rotate }]" v-clickoutside="handClose">
-        <fox-input @click.native="handClick" v-model="label" suffix-icon="chevron-down" :disabled="disabled"></fox-input>
+        <fox-input
+            @click.native="handClick"
+            v-model="label"
+            suffix-icon="chevron-down"
+            :disabled="disabled"
+            :placeholder="placeholder"
+        ></fox-input>
         <transition name="fox-zoom-in-top">
             <div v-show="visiable" class="fox-transfer">
                 <ul ref="scrollbar" class="fox-select__scroll">
@@ -29,6 +35,10 @@ export default {
         emptyText: String,
         value: [String, Number],
         disabled: Boolean,
+        placeholder: {
+            type: String,
+            default: "请选择",
+        },
     },
     data() {
         return {

@@ -103,17 +103,23 @@
                 </div>
             </div>
             <div>
-                <p class="title">Select 下拉框</p>
+                <p class="title">Select 选择器</p>
                 <div class="mt-10">
                     <fox-select v-model="selectValue">
                         <fox-option value="1" label="蛋糕"></fox-option>
-                        <fox-option value="年糕"></fox-option>
+                        <fox-option value="年糕" disabled></fox-option>
                         <fox-option label="雪糕"></fox-option>
                     </fox-select>
                 </div>
             </div>
             <div>
-                <p class="title">Switch 开关</p>
+                <p class="title">DatePicker 日期选择器</p>
+                <div class="mt-10">
+                    <fox-date-picker v-model="dateValue"></fox-date-picker>
+                </div>
+            </div>
+            <div>
+                <p class="title">Form 表单</p>
                 <div class="mt-10">
                     <fox-form :model="formData" :rules="rules" ref="form1" label-position="right">
                         <fox-form-item prop="name" label="名称">
@@ -169,6 +175,7 @@ export default {
                 like: [{ required: true, type: "array", message: "爱好为必选项", tiggers: "change" }],
             },
             selectValue: "雪糕",
+            dateValue: "",
         };
     },
     methods: {
@@ -195,7 +202,7 @@ export default {
 #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: #666;
     height: 100vh;
     box-sizing: border-box;
     font-size: 14px;
@@ -243,5 +250,6 @@ export default {
     font-size: 15px;
     font-size: 600;
     margin: 10px 0;
+    color: #333;
 }
 </style>

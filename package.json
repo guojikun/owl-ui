@@ -27,9 +27,11 @@
         "README.md"
     ],
     "scripts": {
+        "serve:test": "vue-cli-service serve",
         "serve:docs": "vuepress dev ./docs",
+        "serve:lib": "vue-cli-service build --dest lib --target lib --name fox-design ./src/index.js",
         "build:docs": "vuepress build docs",
-        "serve": "vue-cli-service serve",
+        "serve": "npm run serve:lib && npm run serve:docs",
         "build": "vue-cli-service build --modern --dest docs",
         "build:lib": "vue-cli-service build --dest lib --target lib --name fox-design ./src/index.js",
         "test:unit": "vue-cli-service test:unit",
@@ -41,6 +43,7 @@
     "dependencies": {
         "async-validator": "^3.4.0",
         "core-js": "^3.6.5",
+        "dayjs": "^1.8.33",
         "popper.js": "^1.16.1",
         "vue": "^2.6.11",
         "vue-router": "^3.2.0",

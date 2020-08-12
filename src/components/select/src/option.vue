@@ -1,5 +1,5 @@
 <template>
-    <li class="fox-option" @click="handClick">
+    <li :class="['fox-option', { 'is-disabled': disabled }]" @click="handClick">
         <slot>
             <span>{{ currentLabel }}</span>
         </slot>
@@ -15,6 +15,7 @@ export default {
     props: {
         value: [String, Number],
         label: String,
+        disabled: Boolean,
     },
     inject: {
         select: {
@@ -56,8 +57,16 @@ export default {
     box-sizing: border-box;
     padding: 0 15px;
     cursor: pointer;
+    font-size: 13px;
     &:hover {
         background-color: #f3f3f3;
+    }
+    &.is-disabled {
+        cursor: not-allowed;
+        color: #c0c4cc;
+        &:hover {
+            background-color: #fff;
+        }
     }
 }
 </style>
