@@ -18,7 +18,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: guojikun/fox-design@dev
+        uses: actions/checkout@v1
       
       - name: build and deploy
         run: npm run build:docs
