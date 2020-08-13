@@ -37,9 +37,6 @@
         "test:unit": "vue-cli-service test:unit",
         "lint": "vue-cli-service lint"
     },
-    "peerDependencies": {
-        "vue": "^2.6.11"
-    },
     "dependencies": {
         "async-validator": "^3.4.0",
         "core-js": "^3.6.5",
