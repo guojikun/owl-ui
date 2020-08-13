@@ -21,13 +21,12 @@ jobs:
       - uses: actions/checkout@dev
 
       - name: build and deploy
-        uses: guojikun/fox-design@dev
         env:
           ACCESS_TOKEN: ${{ secrets.DOCS }}
           BRANCH: gh-pages
           FOLDER: build
         run: npm run build:docs
-    steps:
+
       - name: 部署文档到gh-pages
         env:
           ACCESS_TOKEN: ${{ secrets.DOCS }}
