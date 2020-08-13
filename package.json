@@ -30,7 +30,7 @@
         "serve:test": "vue-cli-service serve",
         "serve:docs": "vuepress dev ./docs",
         "serve:lib": "vue-cli-service build --dest lib --target lib --name fox-design ./src/index.js",
-        "build:docs": "vuepress build docs",
+        "build:docs": "npx vuepress build docs",
         "serve": "npm run serve:lib && npm run serve:docs",
         "build": "vue-cli-service build --modern --dest docs",
         "build:lib": "vue-cli-service build --dest lib --target lib --name fox-design ./src/index.js",
