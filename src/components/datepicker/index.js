@@ -1,7 +1,7 @@
-import Option from "./src/datepicker.vue";
+import DatePicker from "./src/datepicker.vue";
 
-Option.install = Vue => {
-    Vue.component(Option.name, Option);
+DatePicker.install = Vue => {
+    Vue.component(DatePicker.name, DatePicker);
 };
 
-export default Option;
+export default DatePicker;

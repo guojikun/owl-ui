@@ -32,6 +32,7 @@ import CheckboxGroup from "./components/checkbox-group/index.js";
 import Select from "./components/select/index.js";
 import Option from "./components/option/index.js";
 import Switch from "./components/switch/index.js";
+import DatePicker from "./components/datepicker/index.js";
 import Rate from "./components/rate/index.js";
 // nav组件
 import Breadcrumb from "./components/breadcrumb/index.js";
@@ -76,6 +77,7 @@ let components = [
     Select,
     Option,
     Switch,
+    DatePicker,
     Rate,
 
     Table,
