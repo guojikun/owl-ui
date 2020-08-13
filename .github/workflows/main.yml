@@ -23,13 +23,12 @@ jobs:
             - name: 安装依赖
               run: yarn
 
-            - name: build and deploy
-              run: yarn run build:docs
-
             - name: 配置git
               run: git config --global user.email "guojikun486546@163.com" && git config --global user.name "GuoJikun"
 
-            - name: 部署文档到gh-pages
+            - name: build and deploy
               env:
                   ACCESS_TOKEN: ${{ secrets.DOCS }}
-              run: cd docs/.vuepress/dist && git init && git add -A && git commit -m "deploy" && git push git:$ACCESS_TOKEN@github.com:guojikun/fox-design.git master:gh-pages
+                  BRANCH: gh-pages
+                  FOLDER: docs/.vuepress/dist
+              run: yarn run build:docs
