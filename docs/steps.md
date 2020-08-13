@@ -1,97 +1,50 @@
-<div class="page-item">
-    <div>
-        <h1 class="page-title">Steps 步骤条</h1>
-        <p class="page-dec"></p>
-    </div>
+# Steps 步骤条
+
+## 基础用法
+
+简单的步骤条。
+
+<div>
+<fox-steps :active="active">
+<fox-step title="步骤一" description="这里是该步骤的描述信息"></fox-step>
+<fox-step title="步骤二" description="这里是该步骤的描述信息"></fox-step>
+<fox-step title="步骤三" description="这里是该步骤的描述信息"></fox-step>
+</fox-steps>
+<fox-button class="mt-20" type="primary" @click="next">
+下一步
+</fox-button>
 </div>
-<div class="page-item">
-    <div>
-        <h1 class="page-item-title">基础用法</h1>
-        <p class="page-item-dec">简单的步骤条。</p>
-    </div>
-    <div class="page-item-conent">
-        <div>
-            <fox-steps :active="active">
-                <fox-step
-                    title="步骤一"
-                    description="这里是该步骤的描述信息"
-                ></fox-step>
-                <fox-step
-                    title="步骤二"
-                    description="这里是该步骤的描述信息"
-                ></fox-step>
-                <fox-step
-                    title="步骤三"
-                    description="这里是该步骤的描述信息"
-                ></fox-step>
-            </fox-steps>
-            <fox-button class="mt-20" type="primary" @click="next">
-                下一步
-            </fox-button>
-        </div>
-    </div>
+
+## 设置状态
+
+通过`status`设置当前步骤的状态，通过`finishStatus`设置已完成步骤的状态
+
+<div>
+<fox-steps :active="active1" status="wait">
+<fox-step title="步骤一" description="这里是该步骤的描述信息"></fox-step>
+<fox-step title="步骤二" description="这里是该步骤的描述信息"></fox-step>
+<fox-step title="步骤三" description="这里是该步骤的描述信息"></fox-step>
+</fox-steps>
+<fox-button class="mt-20" type="primary" @click="next1">
+    下一步
+</fox-button>
 </div>
-<div class="page-item">
-    <div>
-        <h1 class="page-item-title">设置状态</h1>
-        <p class="page-item-dec">
-            通过status设置当前步骤的状态，通过finishStatus设置已完成步骤的状态
-        </p>
-    </div>
-    <div class="page-item-conent">
-        <div>
-            <fox-steps :active="active1" status="wait">
-                <fox-step
-                    title="步骤一"
-                    description="这里是该步骤的描述信息"
-                ></fox-step>
-                <fox-step
-                    title="步骤二"
-                    description="这里是该步骤的描述信息"
-                    status="success"
-                ></fox-step>
-                <fox-step
-                    title="步骤三"
-                    description="这里是该步骤的描述信息"
-                    status="error"
-                ></fox-step>
-            </fox-steps>
-            <fox-button class="mt-20" type="primary" @click="next1">
-                下一步
-            </fox-button>
-        </div>
-    </div>
+
+## 竖式步骤条
+
+竖直方向的步骤条。
+
+<div>
+<div style="height: 240px;">
+<fox-steps :active="active1" direction="vertical">
+<fox-step title="步骤一" description="这里是该步骤的描述信息"></fox-step>
+<fox-step title="步骤二" description="这里是该步骤的描述信息"></fox-step>
+<fox-step title="步骤三" description="这里是该步骤的描述信息"></fox-step>
+</fox-steps>
 </div>
-<div class="page-item">
-    <div>
-        <h1 class="page-item-title">竖式步骤条</h1>
-        <p class="page-item-dec">
-            竖直方向的步骤条。
-        </p>
-    </div>
-    <div class="page-item-conent">
-        <div>
-            <div style="height: 240px;">
-                <fox-steps :active="active1" direction="vertical">
-                    <fox-step
-                        title="步骤一"
-                        description="这里是该步骤的描述信息"
-                    ></fox-step>
-                    <fox-step
-                        title="步骤二"
-                        description="这里是该步骤的描述信息"
-                    ></fox-step>
-                    <fox-step
-                        title="步骤三"
-                        description="这里是该步骤的描述信息"
-                    ></fox-step>
-                </fox-steps>
-            </div>
-            <fox-button class="mt-20" type="primary" @click="next1">
-                下一步
-            </fox-button>
-        </div>
-    </div>
+<fox-button class="mt-20" type="primary" @click="next1">
+下一步
+</fox-button>
 </div>
 
 <script>

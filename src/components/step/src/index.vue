@@ -5,8 +5,8 @@
         </div>
         <div class="fox-step__icon">
             <div :class="['fox-step__icon-inner', `fox-step__icon-inner-${getCurrStatus}`]">
-                <fox-icon name="ios-checkmark" size="16" v-if="getCurrStatus === 'finish'"></fox-icon>
-                <fox-icon name="ios-close" size="16" v-else-if="getCurrStatus === 'error'"></fox-icon>
+                <fox-icon name="check2" size="16" v-if="getCurrStatus === 'finish'"></fox-icon>
+                <fox-icon name="x" size="16" v-else-if="getCurrStatus === 'error'"></fox-icon>
                 <span v-else>{{ index }}</span>
             </div>
         </div>
@@ -81,7 +81,7 @@ export default {
 .fox-step {
     display: inline-block;
     position: relative;
-    vertical-align: top;
+    vertical-align: middle;
     flex: 1;
     overflow: hidden;
     &:last-child {
@@ -117,7 +117,7 @@ export default {
             display: inline-block;
             width: 26px;
             height: 26px;
-            line-height: 24px;
+            line-height: 26px;
             margin-right: 8px;
             text-align: center;
             border: 1px solid #ccc;
