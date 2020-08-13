@@ -21,13 +21,13 @@ jobs:
       - uses: actions/checkout@dev
 
       - name: build and deploy
-        env:
+      - env:
           ACCESS_TOKEN: ${{ secrets.DOCS }}
           BRANCH: gh-pages
           FOLDER: build
       - run: npm run build:docs
 
       - name: 部署文档到gh-pages
-        env:
+      - env:
           ACCESS_TOKEN: ${{ secrets.DOCS }}
       - run: cd docs/.vuepress/dist && git init && git add * && git commit - m "a" && git push git:$ACCESS_TOKEN@github.com:guojikun/fox-design.git master:gh-pages
