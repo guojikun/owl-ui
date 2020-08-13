@@ -14,7 +14,6 @@ jobs:
     build:
         # The type of runner that the job will run on
         runs-on: ubuntu-latest
-
         # Steps represent a sequence of tasks that will be executed as part of the job
         steps:
             # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -28,3 +27,9 @@ jobs:
                   BRANCH: gh-pages
                   FOLDER: build
                   BUILD_SCRIPT: npm run build:docs
+              run: npm run build:docs
+        steps:
+            - name: 部署文档到gh-pages
+              env:
+                ACCESS_TOKEN: ${{ secrets.DOCS }}
+              run: cd docs/.vuepress/dist && git init && git add * && git commit - m "a" && git push git:$ACCESS_TOKEN@github.com:guojikun/fox-design.git master:gh-pages
