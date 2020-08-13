@@ -50,7 +50,7 @@ export default {
     },
     computed: {
         getCurrIndex() {
-            const parent = findComponentUpward(this, "Steps");
+            const parent = findComponentUpward(this, "FoxSteps");
             let active = 0;
             if (parent) {
                 active = parent.active;
@@ -58,7 +58,7 @@ export default {
             return active;
         },
         getCurrStatus() {
-            const parent = findComponentUpward(this, "Steps");
+            const parent = findComponentUpward(this, "FoxSteps");
             let state = "wait";
             if (this.getCurrIndex > this.index) {
                 state = parent.finishStatus;

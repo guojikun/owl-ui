@@ -5,30 +5,28 @@ name: 自动部署文档
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  push:
-    branches: [dev]
+    push:
+        branches: [dev]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
-      - uses: actions/checkout@dev
+    # This workflow contains a single job called "build"
+    build:
+        # The type of runner that the job will run on
+        runs-on: ubuntu-latest
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+            - name: Checkout
+              uses: actions/checkout@v1
 
-      - name: build and deploy
-        uses: guojikun/fox-design@dev
-        env:
-          ACCESS_TOKEN: ${{ secrets.DOCS }}
-          BRANCH: gh-pages
-          FOLDER: build
-        run: npm run build:docs
-    steps:
-      - name: 部署文档到gh-pages
-        env:
-          ACCESS_TOKEN: ${{ secrets.DOCS }}
-        run: cd docs/.vuepress/dist && git init && git add * && git commit - m "a" && git push git:$ACCESS_TOKEN@github.com:guojikun/fox-design.git master:gh-pages
+            - name: 安装依赖
+              run: npm i
+
+            - name: build and deploy
+              run: npm run build:docs
+
+            - name: 部署文档到gh-pages
+              env:
+                  ACCESS_TOKEN: ${{ secrets.DOCS }}
+              run: cd docs/.vuepress/dist && git init && git add * && git commit - m "a" && git push git:$ACCESS_TOKEN@github.com:guojikun/fox-design.git master:gh-pages
