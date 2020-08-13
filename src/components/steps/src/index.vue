@@ -40,7 +40,7 @@ export default {
         },
     },
     mounted() {
-        const children = findComponentsDownward(this, "Step");
+        const children = findComponentsDownward(this, "FoxStep");
         children.map((cur, i) => {
             cur.updateIndex(i + 1);
         });
