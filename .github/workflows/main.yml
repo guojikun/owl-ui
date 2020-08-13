@@ -18,11 +18,13 @@ jobs:
         # Steps represent a sequence of tasks that will be executed as part of the job
         steps:
             # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-            - uses: actions/checkout@v2
+            - name: Checkout
+            - uses: actions/checkout@dev
 
-            - name: 设置git账号，邮箱
-              run: git config --global user.email "guojikun486546@163.com" && git config --global user.name "guojikun"
-
-            # Runs a single command using the runners shell
-            - name: 开始构建
-              run: bash deploy.sh
+            - name: build and deploy
+              uses: guojikun/fox-design@dev
+              env:
+                  ACCESS_TOKEN: ${{ secrets.DOCS }}
+                  BRANCH: gh-pages
+                  FOLDER: build
+                  BUILD_SCRIPT: npm run build:docs
