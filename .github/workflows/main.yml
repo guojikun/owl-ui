@@ -32,3 +32,7 @@ jobs:
                   BRANCH: gh-pages
                   FOLDER: docs/.vuepress/dist
               run: yarn run build:docs
+            - name: 部署文档到gh-pages
+              env:
+                  ACCESS_TOKEN: ${{ secrets.DOCS }}
+              run: cd docs/.vuepress/dist && git init && git add -A && git commit -m "deploy" && git push https://$ACCESS_TOKEN@github.com/guojikun/fox-design.git master:gh-pages
